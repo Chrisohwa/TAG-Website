@@ -1,0 +1,29 @@
+
+
+/* Chrome, Safari, and Opera */
+::-webkit-scrollbar {
+  width: 0;
+  border-radius: 8px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.no_scroller::-webkit-scrollbar {
+  display: none;
+}
+
+.no_scroller {
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  position: relative;
+}
+
+.full_width {
+  width: 100vw;
+  margin-left: calc((100% - 100vw) / 2);
+  margin-right: calc((100% - 100vw) / 2);
+}
