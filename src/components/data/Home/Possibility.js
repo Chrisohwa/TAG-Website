@@ -7,9 +7,9 @@ const Possibility = () => {
   return (
     <Flex
       className="full_width"
-      bgGradient="to-b"
-      gradientFrom="#fff"
-      gradientTo="#e0e0e0"
+      // bgGradient="to-b"
+      // gradientFrom="#fff"
+      // gradientTo="#e0e0e0"
       direction="column"
       align="center"
       // justify="center"
@@ -19,7 +19,7 @@ const Possibility = () => {
       <Container maxW="1350px" px="0px">
         <Flex
           flexDir="column"
-          gap="30px"
+          gap="28px"
           textAlign="Center"
           px={{ base: "", md: "", xl: "40px" }}
         >
@@ -34,7 +34,6 @@ const Possibility = () => {
             color="#001A32"
             fontWeight={600}
             fontSize={{ base: "24px", md: "28px", xl: "36px" }}
-            lineHeight="64px"
           >
             Industries That Power Possibilities
           </Heading>

@@ -13,7 +13,8 @@ const PossibilityCard = ({ image, title, description, link }) => {
       backgroundImage={`url(${image})`}
       backgroundSize="cover"
       backgroundPosition="center"
-      _hover={{ cursor: "pointer" }}
+      _hover={{ cursor: "pointer", scale: "105%" }}
+      transition="0.3s ease-in-out"
     >
       {/* Gradient overlay */}
       <Box
@@ -35,6 +36,7 @@ const PossibilityCard = ({ image, title, description, link }) => {
         px="10px"
         flexDirection="column"
         color="#ffffff"
+        _hover={{ bg: "#474c50ff" }}
       >
         <Heading fontSize="15px" fontWeight={500} mb={1} noOfLines={1}>
           {title}

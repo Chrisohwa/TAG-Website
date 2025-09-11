@@ -1,4 +1,5 @@
 import { Box, Container, Flex, Heading, Image, Text, VStack } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 
 const OurPhilosophy = () => {
   return (
@@ -10,11 +11,14 @@ const OurPhilosophy = () => {
       gradientTo="#fafdfe"
       py={{ base: 10, md: 20 }}
       mt={{ base: "-45px", md: "0px", lg: "0px", xl: "0px" }}
-      id="philosophy"
     >
-      <Container maxW="1350px" px={{ base: "10px", md: "15px", xl: "0px" }}>
+      <Container
+        maxW="1350px"
+        px={{ base: "10px", md: "15px", xl: "0px" }}
+        id="about-us"
+      >
         <Flex
-          direction={{ base: "column", md: "row" }}
+          direction={{ base: "column-reverse", md: "row" }}
           gap={20}
           align="flex-start"
           pt={{ base: "10px", xl: "0px" }}
@@ -34,41 +38,64 @@ const OurPhilosophy = () => {
             flexBasis="40%"
             mx="auto"
           >
-            <Image
-              src="/images/about/philosophy1.jpg"
-              alt="Happy meeting"
-              borderRadius="md"
-              objectFit="cover"
-              w={{ base: "100%", md: "200px", lg: "210px", xl: "525px" }}
-              h="395px"
-            />
-            <Flex
-              position={{ base: "relative", md: "absolute" }}
-              top={{ base: "0px", md: "50%" }}
-              left={{ base: "0px", md: "90px" }}
-              transform={{ base: "", md: "translateY(-50%)" }}
-              bg="#fff"
-              w={{ base: "100%", md: "200px", lg: "210px", xl: "470px" }}
-              justify="flex-end"
-              zIndex={0}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ y: [-50, 0], opacity: 1 }}
+              transition={{ duration: 1.1 }}
             >
               <Image
-                src="/images/about/philosophy3.jpg"
-                alt="Mission Vision Value"
-                objectFit="contain"
-                w={{ base: "100%", md: "100%" }}
-                h={{ base: "250px", md: "380px" }}
-                zIndex={1}
+                src="/images/about/philosophy1.jpg"
+                alt="Happy meeting"
+                borderRadius="md"
+                objectFit="cover"
+                w={{ base: "100%", md: "200px", lg: "210px", xl: "525px" }}
+                h="395px"
+                loading="lazy"
               />
-            </Flex>
-            <Image
-              src="/images/about/philosophy2.jpg"
-              alt="Team clapping"
-              borderRadius="md"
-              objectFit="cover"
-              w={{ base: "100%", md: "200px", lg: "210px", xl: "525px" }}
-              h="395px"
-            />
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ x: [-50, 0], opacity: 1 }}
+              transition={{ duration: 1.1 }}
+            >
+              <Flex
+                position={{ base: "relative", md: "absolute" }}
+                top={{ base: "0px", md: "50%" }}
+                left={{ base: "0px", md: "90px" }}
+                transform={{ base: "", md: "translateY(-50%)" }}
+                bg="#fff"
+                w={{ base: "100%", md: "200px", lg: "210px", xl: "470px" }}
+                justify="flex-end"
+                zIndex={0}
+              >
+                <Image
+                  src="/images/about/philosophy3.jpg"
+                  alt="Mission Vision Value"
+                  objectFit="contain"
+                  w={{ base: "100%", md: "100%" }}
+                  h={{ base: "250px", md: "380px" }}
+                  zIndex={1}
+                  loading="lazy"
+                />
+              </Flex>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ y: [50, 0], opacity: 1 }}
+              transition={{ duration: 1.1 }}
+            >
+              <Image
+                src="/images/about/philosophy2.jpg"
+                alt="Team clapping"
+                borderRadius="md"
+                objectFit="cover"
+                w={{ base: "100%", md: "200px", lg: "210px", xl: "525px" }}
+                h="395px"
+                loading="lazy"
+              />
+            </motion.div>
           </Flex>
 
           {/* Right side text */}

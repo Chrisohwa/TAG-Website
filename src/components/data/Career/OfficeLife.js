@@ -31,11 +31,14 @@ const OfficeLife = () => {
     <Box
       className="full_width"
       minH={{ base: "40vh", md: "60vh" }}
-      py={{ base: 10, md: 20 }}
+      py={{ base: 10, md: 20, xl:"150px" }}
       mt={{ base: "-25px", md: "-55px", xl: "-55px" }}
-      id=""
     >
-      <Container maxW="1350px" px={{ base: "10px", md: "15px", xl: "0px" }}>
+      <Container
+        maxW="1350px"
+        px={{ base: "10px", md: "15px", xl: "0px" }}
+        id="life"
+      >
         <Flex flexDir="column" justify="center" align="center" gap={4}>
           <Heading
             fontWeight={700}
@@ -79,6 +82,9 @@ const OfficeLife = () => {
             gridColumn={{ base: "1", md: "1 / span 2", xl: "1 / span 2" }}
             gridRow={{ base: "1", md: "1 / span 2", xl: "1 / span 2" }}
             {...hoverAnim}
+            initial={{ opacity: 0 }}
+            whileInView={{ x: [-60, 0], opacity: 1 }}
+            transition={{ duration: 1.1 }}
           >
             <Box {...imgEffect} src="/images/career/grid1.png" alt="grid1" />
           </MotionBox>
@@ -88,6 +94,9 @@ const OfficeLife = () => {
             gridColumn={{ base: "1", md: "1", xl: "1" }}
             gridRow={{ base: "2", md: "3", xl: "3" }}
             {...hoverAnim}
+            initial={{ opacity: 0 }}
+            whileInView={{ x: [-60, 0], opacity: 1 }}
+            transition={{ duration: 1.1 }}
           >
             <Box {...imgEffect} src="/images/career/grid2.png" alt="grid2" />
           </MotionBox>
@@ -97,6 +106,9 @@ const OfficeLife = () => {
             gridColumn={{ base: "1", md: "2", xl: "2" }}
             gridRow={{ base: "3", md: "3", xl: "3" }}
             {...hoverAnim}
+            initial={{ opacity: 0 }}
+            whileInView={{ y: [60, 0], opacity: 1 }}
+            transition={{ duration: 1.1 }}
           >
             <Box {...imgEffect} src="/images/career/grid3.png" alt="grid3" />
           </MotionBox>
@@ -106,6 +118,9 @@ const OfficeLife = () => {
             gridColumn={{ base: "1", md: "2", xl: "3" }}
             gridRow={{ base: "4", md: "4", xl: "1" }}
             {...hoverAnim}
+            initial={{ opacity: 0 }}
+            whileInView={{ y: [-60, 0], opacity: 1 }}
+            transition={{ duration: 1.1 }}
           >
             <Box {...imgEffect} src="/images/career/grid4.png" alt="grid4" />
           </MotionBox>
@@ -119,6 +134,9 @@ const OfficeLife = () => {
               xl: "2 / span 2",
             }}
             {...hoverAnim}
+            initial={{ opacity: 0 }}
+            whileInView={{ y: [60, 0], opacity: 1 }}
+            transition={{ duration: 1.1 }}
           >
             <Box {...imgEffect} src="/images/career/grid5.png" alt="grid5" />
           </MotionBox>
@@ -132,16 +150,22 @@ const OfficeLife = () => {
               xl: "1 / span 2",
             }}
             {...hoverAnim}
+            initial={{ opacity: 0 }}
+            whileInView={{ x: [60, 0], opacity: 1 }}
+            transition={{ duration: 1.1 }}
           >
-            <Box {...imgEffect} src="/images/career/grid6.jpg" alt="grid6" />
+            <Box {...imgEffect} src="/images/career/grid6.png" alt="grid6" />
           </MotionBox>
 
           {/* Button */}
-          <Box
+          <MotionBox
             gridColumn={{ base: "1", md: "2", xl: "4" }}
             gridRow={{ base: "7", md: "5", xl: "3" }}
             alignSelf="center"
             justifySelf="center"
+            initial={{ opacity: 0 }}
+            whileInView={{ x: [60, 0], opacity: 1 }}
+            transition={{ duration: 1.1 }}
           >
             <Button
               bg="#003366"
@@ -155,7 +179,7 @@ const OfficeLife = () => {
             >
               Learn More About Us
             </Button>
-          </Box>
+          </MotionBox>
         </Grid>
       </Container>
     </Box>

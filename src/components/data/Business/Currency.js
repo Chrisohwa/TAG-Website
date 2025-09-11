@@ -1,6 +1,7 @@
 import { Box, Flex, Image, Container, Text, Heading } from "@chakra-ui/react";
 import React from "react";
 import Back from "../../common/Back";
+import { motion } from "framer-motion";
 
 const Currency = () => {
   return (
@@ -31,57 +32,79 @@ const Currency = () => {
           zIndex={1}
         />
 
-        <Container maxW="1220px">
-          <Flex h="full" direction="column" justify="Flex-end">
+        <Container maxW="1350px" px={{ base: "10px", md: "15px", xl: "0px" }}>
+          <Flex w="100%" h="full" direction="column" justify="Flex-end">
             <Box mb="6%" zIndex={3}>
-              <Heading
-                color="#ffffff"
-                fontWeight="bold"
-                fontSize={{ base: "3xl", xl: "4xl" }}
-                mb="20px"
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ x: [60, 0], opacity: 1 }}
+                transition={{ duration: 1.1 }}
               >
-                Currency Services
-              </Heading>
+                <Heading
+                  color="#ffffff"
+                  fontWeight="bold"
+                  fontSize={{ base: "3xl", xl: "4xl" }}
+                  mb="20px"
+                >
+                  Currency Services
+                </Heading>
+                <Back />
+              </motion.div>
             </Box>
           </Flex>
         </Container>
       </Flex>
 
-      <Container maxW="1220px">
-        <Flex
-          flexDir="column"
-          p={{ base: "5px", md: "", xl: "60px" }}
-          mt={{ base: "40px", md: "40px", xl: "40px" }}
-          gap={{ base: "40px", md: "", xl: "60px" }}
-        >
-          <Box fontSize="20px">
-            <Text
-              textAlign={{ base: "justify", md: "center", xl: "center" }}
-              mb={{ base: "20px", md: "", xl: "20px" }}
+      <Flex
+        className="full_width"
+        justify="center"
+        bgGradient="to-t"
+        gradientFrom="#fff 80%"
+        gradientTo="#7b94ab"
+      >
+        <Container maxW="1350px" px={{ base: "10px", md: "15px", xl: "0px" }}>
+          <Flex
+            w="100%"
+            flexDir="column"
+            p={{ base: "5px", md: "", xl: "" }}
+            mt={{ base: "40px", md: "40px", xl: "40px" }}
+            gap={{ base: "40px", md: "", xl: "60px" }}
+          >
+            <Box
+              fontSize={{ base: "20px", md: "22px", xl: "33px" }}
+              color="#001A32"
+              fontWeight={500}
+              lineHeight="120%"
             >
-              At Transalliance Group, we enable businesses navigate the
-              complexities of global trade with seamless currency exchange,
-              liquidity management, and cross-border trade solutions. Our
-              currency services are designed to optimize cash flow, mitigate
-              currency risks, and ensure compliance with international financial
-              regulations. Whether foreign currency inflows, structured FX
-              transactions, or offshore trade payments, we provide the expertise
-              and infrastructure to facilitate smooth and secure transactions.
-            </Text>
-            <Text textAlign={{ base: "justify", md: "center", xl: "center" }}>
-              For businesses seeking reliable financial solutions, our member
-              company, Transalliance Capital Limited (TransCap), offers bespoke
-              services to support international trade, investment, and treasury
-              operations. With a focus on efficiency, compliance, and strategic
-              financial management, Transalliance Capital is your trusted
-              partner in navigating the global financial landscape.
-            </Text>
-          </Box>
-          <Box>
-            <Image src="/images/services/transcaplogo.png" />
-          </Box>
-        </Flex>
-      </Container>
+              <Text
+                textAlign={{ base: "justify", md: "center", xl: "center" }}
+                mb={{ base: "20px", md: "", xl: "30px" }}
+              >
+                At Transalliance Group, we enable businesses navigate the
+                complexities of global trade with seamless currency exchange,
+                liquidity management, and cross-border trade solutions. Our
+                currency services are designed to optimize cash flow, mitigate
+                currency risks, and ensure compliance with international
+                financial regulations. Whether foreign currency inflows,
+                structured FX transactions, or offshore trade payments, we
+                provide the expertise and infrastructure to facilitate smooth
+                and secure transactions.
+              </Text>
+              <Text textAlign={{ base: "justify", md: "center", xl: "center" }}>
+                For businesses seeking reliable financial solutions, our member
+                company, Transalliance Capital Limited (TransCap), offers
+                bespoke services to support international trade, investment, and
+                treasury operations. With a focus on efficiency, compliance, and
+                strategic financial management, Transalliance Capital is your
+                trusted partner in navigating the global financial landscape.
+              </Text>
+            </Box>
+            <Box pb="60px">
+              <Image src="/images/services/transcaplogo.png" />
+            </Box>
+          </Flex>
+        </Container>
+      </Flex>
     </>
   );
 };

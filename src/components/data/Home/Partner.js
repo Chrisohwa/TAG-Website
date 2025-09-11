@@ -13,9 +13,9 @@ const Partner = () => {
   return (
     <Box
       mt={{ base: 0, md: 0, xl: "0px" }}
-      bgGradient="to-b"
-      gradientFrom="#e7ebef 60%"
-      gradientTo="#5e83a6"
+      // bgGradient="to-b"
+      // gradientFrom="#e7ebef 60%"
+      // gradientTo="#5e83a6"
       className="full_width"
       minH="50vh"
       pt={{ base: "60px" }}

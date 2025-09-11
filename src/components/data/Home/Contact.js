@@ -7,20 +7,29 @@ import {
   Button,
   Container,
   Link,
+  HStack,
 } from "@chakra-ui/react";
 import Fields from "../../common/Fields";
 import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Formik, Form } from "formik";
+import { messSchema, messValue } from "../../../utils/validation";
 
 const Contact = () => {
-  const [checked, setChecked] = useState(false);
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleSubmit = (values, { resetForm }) => {
+    console.log("Form submitted", values);
+    resetForm();
+  };
   return (
     <Box
       className="full_width"
       minH={{ base: "70vh", md: "70vh", xl: "100vh" }}
       bgGradient="to-b"
-      gradientFrom="#5e83a6 "
-      gradientTo="#002a52 "
-      py={{ base: "0px", md: "50px", xl: "0px" }}
+      gradientFrom="#fff "
+      gradientTo="#002548ff 50%"
+      py={{ base: "0px", md: "50px", xl: "40px" }}
       mt={{ base: "-5px", md: "-5px", xl: "0px" }}
       mb={{ base: "-50px", md: "-50px", xl: "0px" }}
     >
@@ -41,83 +50,107 @@ const Contact = () => {
             align={{ base: "center", md: "flex-start", xl: "flex-start" }}
             justify={{ base: "center", md: "center", xl: "flex-start" }}
           >
-            <Text
-              color="#FFBD59"
-              fontSize={{ base: "20px", md: "20px", xl: "20px" }}
-              fontWeight={700}
-              textAlign={{ base: "center", md: "left", xl: "left" }}
-              lineHeight="64px"
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ x: [-60, 0], opacity: 1 }}
+              transition={{ duration: 1.1 }}
             >
-              Contact Us
-            </Text>
-
-            <Heading
-              color="#fff"
-              fontWeight={600}
-              fontSize={{ base: "26px", md: "26px", xl: "32px" }}
-              textAlign={{ base: "center", md: "left", xl: "left" }}
-              lineHeight="64px"
-            >
-              Let&apos;s Create the Future Together
-            </Heading>
-
-            <Text
-              fontWeight={500}
-              fontSize="20px"
-              color="#fff"
-              maxW={{ base: "100%", md: "380px", xl: "545px" }}
-              textAlign={{ base: "center", md: "left", xl: "left" }}
-              mb={4}
-            >
-              Whether you&apos;re looking to collaborate, learn more about our
-              initiatives, or explore career opportunities, we&apos;d love to
-              hear from you.
-            </Text>
-
-            <Flex
-              direction="column"
-              align={{ base: "center", md: "flex-start", xl: "flex-start" }}
-              justify={{ base: "center", md: "flex-start", xl: "flex-start" }}
-              as="ul"
-              color="#fff"
-              w="100%"
-              mx={{ base: "0", md: "0", xl: "0" }}
-            >
-              <Box
-                as="li"
-                listStyle="disc"
-                ml={{ base: "0", md: "17px", xl: "17px" }}
-                fontSize="20px"
+              <Text
+                color="#FFBD59"
+                fontSize={{ base: "20px", md: "20px", xl: "20px" }}
+                fontWeight={700}
                 textAlign={{ base: "center", md: "left", xl: "left" }}
-                lineHeight="34px"
+                lineHeight="64px"
               >
-                <a href="mailto:info@transalliancegroup.com">
-                  Email: info@transalliancegroup.com
-                </a>
-              </Box>
+                Contact Us
+              </Text>
+            </motion.div>
 
-              <Box
-                as="li"
-                listStyle="disc"
-                ml={{ base: "0", md: "17px", xl: "17px" }}
-                fontSize="20px"
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ x: [-60, 0], opacity: 1 }}
+              transition={{ duration: 1.1 }}
+            >
+              <Heading
+                color="#fff"
+                fontWeight={600}
+                fontSize={{ base: "26px", md: "26px", xl: "32px" }}
                 textAlign={{ base: "center", md: "left", xl: "left" }}
-                lineHeight="34px"
+                lineHeight="64px"
               >
-                <a href="tel:+2348055058367">Phone: +234 805 505 8367</a>
-              </Box>
+                Let&apos;s Create the Future Together
+              </Heading>
+            </motion.div>
 
-              <Box
-                as="li"
-                listStyle="disc"
-                ml={{ base: "0", md: "17px", xl: "17px" }}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ x: [-60, 0], opacity: 1 }}
+              transition={{ duration: 1.1 }}
+            >
+              <Text
+                fontWeight={500}
                 fontSize="20px"
+                color="#fff"
+                maxW={{ base: "100%", md: "380px", xl: "545px" }}
                 textAlign={{ base: "center", md: "left", xl: "left" }}
-                lineHeight="34px"
+                mb={4}
               >
-                Address: 200c Muri Okunola Street VI Lagos.
-              </Box>
-            </Flex>
+                Whether you&apos;re looking to collaborate, learn more about our
+                initiatives, or explore career opportunities, we&apos;d love to
+                hear from you.
+              </Text>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ x: [-60, 0], opacity: 1 }}
+              transition={{ duration: 1.1 }}
+            >
+              <Flex
+                direction="column"
+                align={{ base: "center", md: "flex-start", xl: "flex-start" }}
+                justify={{ base: "center", md: "flex-start", xl: "flex-start" }}
+                as="ul"
+                color="#fff"
+                w="100%"
+                mx={{ base: "0", md: "0", xl: "0" }}
+              >
+                <Box
+                  as="li"
+                  listStyle="disc"
+                  ml={{ base: "0", md: "17px", xl: "17px" }}
+                  fontSize="20px"
+                  textAlign={{ base: "center", md: "left", xl: "left" }}
+                  lineHeight="34px"
+                >
+                  <a href="mailto:info@transalliancegroup.com">
+                    Email: info@transalliancegroup.com
+                  </a>
+                </Box>
+
+                <Box
+                  as="li"
+                  listStyle="disc"
+                  ml={{ base: "0", md: "17px", xl: "17px" }}
+                  fontSize="20px"
+                  textAlign={{ base: "center", md: "left", xl: "left" }}
+                  lineHeight="34px"
+                >
+                  <a href="tel:+2348055058367">Phone: +234 805 505 8367</a>
+                </Box>
+
+                <Box
+                  as="li"
+                  listStyle="disc"
+                  ml={{ base: "0", md: "17px", xl: "17px" }}
+                  fontSize="20px"
+                  textAlign={{ base: "center", md: "left", xl: "left" }}
+                  lineHeight="34px"
+                >
+                  Address: 200c Muri Okunola Street VI Lagos.
+                </Box>
+              </Flex>
+            </motion.div>
           </Flex>
 
           {/* Right Form */}
@@ -134,36 +167,96 @@ const Contact = () => {
             <Heading size="3xl" fontWeight="400" textAlign="center" mb={6}>
               Send Us Message
             </Heading>
-
-            <Fields title="First Name" placeholder="Your First Name" />
-            <Fields title="Email" placeholder="Your Email Address" />
-            <Fields title="Enquiries" placeholder="Note" textarea />
-
-            <Checkbox.Root variant="outline" colorPalette="blue">
-              <Checkbox.HiddenInput />
-              <Checkbox.Control />
-              <Checkbox.Label>
-                {" "}
-                I hereby accept the{" "}
-                <Link href="/about-us" color="blue.600">
-                  T&amp;C
-                </Link>{" "}
-                of TAG
-              </Checkbox.Label>
-            </Checkbox.Root>
-
-            <Button
-              bg="#003366"
-              color="white"
-              w="100%"
-              h="48px"
-              borderRadius="12px"
-              fontWeight="600"
-              _hover={{ bg: "#002244" }}
-              mt="15px"
+            <Formik
+              initialValues={messValue}
+              onSubmit={handleSubmit}
+              validationSchema={messSchema}
             >
-              Send
-            </Button>
+              {({
+                values,
+                errors,
+                touched,
+                handleChange,
+                handleBlur,
+                isSubmitting,
+                isValid,
+                dirty,
+              }) => (
+                <Form>
+                  <Fields
+                    title="First Name"
+                    placeholder="Your First Name"
+                    name="firstName"
+                    type="text"
+                    value={values.firstName}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    error={touched.firstName && errors.firstName}
+                  />
+                  <Fields
+                    title="Email"
+                    placeholder="Your Email Address"
+                    type="email"
+                    name="email"
+                    value={values.email}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    error={touched.email && errors.email}
+                  />
+                  <Fields
+                    title="Enquiries"
+                    placeholder="Note"
+                    textarea
+                    value={values.message}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    name="message"
+                    error={touched.message && errors.message}
+                  />
+
+                  <Checkbox.Root
+                    colorPalette="blue"
+                    name="acceptTerms"
+                    isChecked={values.acceptTerms}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    colorScheme="blue"
+                  >
+                    <Checkbox.HiddenInput />
+                    <Checkbox.Control />
+                    <Checkbox.Label>
+                      I hereby accept the{" "}
+                      <Link href="/about-us" color="blue.600">
+                        T&amp;C
+                      </Link>{" "}
+                      of TAG
+                    </Checkbox.Label>
+                  </Checkbox.Root>
+                  {touched.acceptTerms && errors.acceptTerms && (
+                    <Text color="red" fontSize="sm" mt={1}>
+                      {errors.acceptTerms}
+                    </Text>
+                  )}
+
+                  <Button
+                    type="submit"
+                    bg="#003366"
+                    color="white"
+                    w="100%"
+                    h="48px"
+                    borderRadius="12px"
+                    fontWeight="600"
+                    _hover={{ bg: "#002244" }}
+                    mt="15px"
+                    isLoading={isSubmitting}
+                    loadingText="Sending..."
+                    disabled={!isValid || !dirty}
+                  >
+                    Send
+                  </Button>
+                </Form>
+              )}
+            </Formik>
           </Box>
         </Flex>
       </Container>

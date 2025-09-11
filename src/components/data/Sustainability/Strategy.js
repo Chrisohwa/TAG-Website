@@ -150,6 +150,7 @@ const Strategy = () => {
       bgSize="cover"
       bgPos="center"
       px="20px"
+      id="strategies"
     >
       <Box
         position="absolute"
@@ -291,7 +292,7 @@ const Strategy = () => {
                     left="0"
                     w="100%"
                     h="100%"
-                    bg="rgba(0,0,0,0.7)" 
+                    bg="rgba(0,0,0,0.7)"
                     zIndex={1}
                   />
 

@@ -16,50 +16,49 @@ const VisionSection = () => {
     <Box
       position="relative"
       minH={{ base: "", md: "", xl: "100vh" }}
-      bgGradient="to-b"
-      gradientFrom="#8ea2b4 30%"
-      gradientTo="#fcfcfc 70%"
       display="flex"
       alignItems="center"
-      className="full_width" 
+      className="full_width"
+      // bgImg="url(/images/landing/map.png)"
+      // bgSize="contain"
+      // bgPos="0% -50% "
+      overflow="hidden"
     >
       <Flex
         position={{ base: "", md: "absolute" }}
         overflow="hidden"
         h={{ base: "", md: "", xl: "full" }}
-        display={{ base: "none", md: "none", xl: "flex" }}
+        className="full_width"
+        display={{ base: "none", md: "flex", xl: "flex" }}
       >
-        <Box overflow="hidden" h="full">
-          <Image
-            src="/images/landing/map.png"
-            w={{ base: "", md: "80rem", xl: "100rem" }}
-            h="140vh"
-            position={{ base: "", md: "relative" }}
-            top="-250px"
-            right="-350px"
-          />
-        </Box>
+        <Image
+          src="/images/landing/map.png"
+          // w={{ base: "", md: "80rem", xl: "100rem" }}
+          h="140vh"
+          position={{ base: "", md: "relative" }}
+          objectFit="contain"
+          top={{ md: "-120px", xl: "-290px" }}
+          right={{ md: "-240px", xl: "-280px" }}
+        />
       </Flex>
       <Container
         maxW="1350px"
         px={{ base: "0px", md: "15px", xl: "0px" }}
         overflow="hidden"
       >
-        <Flex
+        {/* <Flex
           position={{ base: "", md: "absolute" }}
           overflow="hidden"
           h={{ base: "", md: "100%", xl: "full" }}
           display={{ base: "none", md: "flex", xl: "none" }}
           right="-120px"
         >
-          <Box overflow="hidden">
-            <Image
-              src="/images/landing/map.png"
-              w={{ base: "", md: "", xl: "" }}
-              h="450px"
-            />
-          </Box>
-        </Flex>
+          <Image
+            src="/images/landing/map.png"
+            w={{ base: "", md: "", xl: "" }}
+            h="450px"
+          />
+        </Flex> */}
 
         <Flex
           direction="column"
@@ -101,7 +100,7 @@ const VisionSection = () => {
             fontWeight={500}
             color="#E6EDF4"
             maxW={{ base: "100%", md: "450px", xl: "745px" }}
-            textAlign={{ base: "justify", md: "justify", xl: "left" }}
+            textAlign={{ base: "center", md: "justify", xl: "left" }}
             lineHeight={{ base: "", md: "", xl: "34px" }}
           >
             Our mission is simple yet profound: to consistently deliver superior

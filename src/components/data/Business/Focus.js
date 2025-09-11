@@ -1,6 +1,7 @@
 import { Container, Text, Box, Flex } from "@chakra-ui/react";
 import React from "react";
 import { BiBorderAll } from "react-icons/bi";
+import Typewriter from "typewriter-effect";
 
 const Focus = () => {
   return (
@@ -11,8 +12,10 @@ const Focus = () => {
       h={{ base: "60vh", xl: "100vh" }}
     >
       <Container maxW="1350px" px={{ base: "10px", md: "15px", xl: "0px" }}>
-        <Text
+        <Flex
           textAlign="center"
+          align="flex-start"
+          justify="center"
           fontWeight={400}
           fontSize={{
             base: "20px",
@@ -21,12 +24,21 @@ const Focus = () => {
             xl: "70px",
           }}
           // px={{ base: "0px", md: "20px", lg: "24px", xl: "26px" }}
-          py={{ base: "30px", md: "20px", lg: "24px", xl: "40px" }}
+          py={{ base: "30px", md: "20px", lg: "24px", xl: "0px" }}
         >
-          “Our focus is on creating products and services that empower
+          <Typewriter
+            options={{
+              strings: `“Our focus is on creating products and services that empower
           businesses, streamline operations, and foster growth in the digital
-          era.”
-        </Text>
+          era.”`,
+              autoStart: true,
+              loop: true,
+              delay: 0,
+              deleteSpeed: 600,
+              pauseFor: 1500,
+            }}
+          />
+        </Flex>
       </Container>
     </Flex>
   );

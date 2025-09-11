@@ -1,4 +1,4 @@
-// MenuDrawer.tsx
+
 import React, { useState, useEffect, useRef } from "react";
 import { MdClose } from "react-icons/md";
 import Drawer from "react-modern-drawer";
@@ -27,7 +27,7 @@ const MenuDrawer = ({ isOpen, onClose }) => {
       "about us": "/about-us",
       businesses: "/businesses",
       sustainability: "/sustainability",
-      careers: "/careers", // fixed typo
+      careers: "/careers", 
     };
 
     const pageRoute = pageRoutes[dat.name.toLowerCase()];
@@ -80,10 +80,10 @@ const MenuDrawer = ({ isOpen, onClose }) => {
 
   return (
     <Drawer
-      open={isOpen} // <-- correct prop name
+      open={isOpen} 
       onClose={onClose}
       direction="top"
-      style={{ height: "100vh", background: "#fff", zIndex: 9999 }} // ensure on top
+      style={{ height: "100vh", background: "#fff", zIndex: 9999 }} 
     >
       <Box mt="20px" px="15px" ref={drawerRef}>
         <Flex justifyContent="flex-end">

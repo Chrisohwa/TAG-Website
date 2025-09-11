@@ -20,6 +20,7 @@ import {
 } from "react-icons/fa";
 import { TfiMedall } from "react-icons/tfi";
 import { RiHeartAddLine } from "react-icons/ri";
+import { motion } from "framer-motion";
 
 const BenefitCard = ({ icon, title, text }) => {
   return (
@@ -32,6 +33,8 @@ const BenefitCard = ({ icon, title, text }) => {
       borderRadius="12px"
       p="24px"
       boxShadow="sm"
+      _hover={{ scale: "105%", bg: "#d3dde6" }}
+      transition="0.3s ease-in-out"
     >
       <VStack align="start" spacing="16px">
         {/* Icon */}
@@ -113,7 +116,11 @@ const Benefit = () => {
       gradientFrom="#fff 50%"
       id=""
     >
-      <Container maxW="1350px" px={{ base: "10px", md: "15px", xl: "0px" }}>
+      <Container
+        maxW="1350px"
+        px={{ base: "10px", md: "15px", xl: "0px" }}
+        id="benefits"
+      >
         <Flex flexDir="column" justify="center" align="center" gap={4}>
           <Heading
             fontWeight={700}
@@ -150,12 +157,18 @@ const Benefit = () => {
           py="60px"
         >
           {benefitList.map((val, i) => (
-            <BenefitCard
-              key={i}
-              icon={val.icon}
-              title={val.title}
-              text={val.text}
-            />
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ x: [60, 0], opacity: 1 }}
+              transition={{ duration: 1.1 }}
+            >
+              <BenefitCard
+                key={i}
+                icon={val.icon}
+                title={val.title}
+                text={val.text}
+              />
+            </motion.div>
           ))}
         </Grid>
       </Container>

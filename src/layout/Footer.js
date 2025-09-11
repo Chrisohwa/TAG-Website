@@ -46,6 +46,8 @@ export default function Footer() {
         py={12}
         className="full_width"
         mt="-2px"
+        zIndex={99}
+        pos="relative"
       >
         <Container maxW="1350px" px={{ base: "0px", md: "0px", xl: "0px" }}>
           <Flex
@@ -117,13 +119,13 @@ export default function Footer() {
             {/* Social icons */}
             <HStack spacing={4} pt={{ base: "5px", md: "10px" }}>
               <Link href="#">
-                <FaTwitter color={color} size={30} />
+                <FaTwitter color={color} size={25} />
               </Link>
               <Link href="#">
-                <FaLinkedinIn color={color} size={30} />
+                <FaLinkedinIn color={color} size={25} />
               </Link>
               <Link href="#">
-                <FaFacebookF color={color} size={30} />
+                <FaFacebookF color={color} size={25} />
               </Link>
             </HStack>
 
@@ -135,7 +137,14 @@ export default function Footer() {
           </Flex>
         </Container>
       </Box>
-      <Box h="147px" mt="-5px" bg={bg2} color={color2}></Box>
+      <Box
+        h="147px"
+        mt="-5px"
+        bg={bg2}
+        color={color2}
+        pos="relative"
+        zIndex={99}
+      ></Box>
     </>
   );
 }

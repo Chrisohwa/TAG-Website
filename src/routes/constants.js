@@ -8,7 +8,7 @@ export const PATHS = {
   TRAVEL_HOSPITALITY: "/businesses/travels",
   SUSTAINABILITY: "/sustainability",
   MEDIA: "/media",
-  CAREERES: "/careeres",
+  CAREERES: "/careers",
   CONTACT_US: "/contact-Us",
   MEMBER_DETAILS: "/about-us/member-details/:id",
 };

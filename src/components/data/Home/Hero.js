@@ -6,8 +6,10 @@ import {
   Heading,
   useMediaQuery,
   Container,
+  Link,
 } from "@chakra-ui/react";
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   const [isMobile] = useMediaQuery("(max-width: 768px)");
@@ -15,7 +17,7 @@ const Hero = () => {
   return (
     <Flex
       position="relative"
-      minH={{ base: "60vh", xl:"100vh" }}
+      minH={{ base: "60vh", xl: "100vh" }}
       overflow="hidden"
       className="full_width"
       align="center"
@@ -47,15 +49,15 @@ const Hero = () => {
       </video>
 
       {/* dark background overlay */}
-            <Box
-              position="absolute"
-              top={0}
-              left={0}
-              width="100%"
-              height="100%"
-              bg="rgba(0, 0, 0, 0.3)"
-              zIndex={1}
-            />
+      <Box
+        position="absolute"
+        top={0}
+        left={0}
+        width="100%"
+        height="100%"
+        bg="rgba(0, 0, 0, 0.3)"
+        zIndex={1}
+      />
 
       {/* Content container */}
       <Container
@@ -73,16 +75,22 @@ const Hero = () => {
           align="center"
         >
           {/* Left: Heading */}
-          <Heading
-            color="#E6EEEB"
-            fontSize={{ base: "2xl", md: "4xl", lg: "63px" }}
-            fontWeight={700}
-            maxW={{ base: "90%", md: "500px", lg: "845px", }}
-            lineHeight={{ base: "1.1", md: "84px" }}
-            textAlign={{ base: "center", md: "left", lg: "left" }}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ x: [-60, 0], opacity: 1 }}
+            transition={{ duration: 1.1 }}
           >
-            Engineering Business Innovations for the Future
-          </Heading>
+            <Heading
+              color="#E6EEEB"
+              fontSize={{ base: "2xl", md: "4xl", lg: "63px" }}
+              fontWeight={700}
+              maxW={{ base: "90%", md: "500px", lg: "845px" }}
+              lineHeight={{ base: "1.1", md: "84px" }}
+              textAlign={{ base: "center", md: "left", lg: "left" }}
+            >
+              Engineering Business Innovations for the Future
+            </Heading>
+          </motion.div>
         </Flex>
       </Container>
 
@@ -91,29 +99,70 @@ const Hero = () => {
         mt={{ base: "0px", md: "120px", xl: "60px" }}
         pr="0px"
       >
-        <Flex
-          position="relative"
-          w="full"
-          pr={{ base: 4, md: 2, xl: "60px" }}
-          zIndex={1}
-          justify={{ base: "center", md: "flex-end" }}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ x: [60, 0], opacity: 1 }}
+          transition={{ duration: 1.1 }}
         >
           <Flex
-            flexDir="column"
-            align={{ base: "center", md: "Flex-start", xl: "flex-start" }}
-            justify={{ base: "", md: "flex-start", xl: "flex-end" }}
-            spacing={1}
-            color="#E6EEEB"
-            fontSize={{ base: "sm", md: "20px" }}
-            fontWeight={700}
-            
+            position="relative"
+            w="full"
+            pr={{ base: 4, md: 2, xl: "60px" }}
+            zIndex={1}
+            justify={{ base: "center", md: "flex-end" }}
           >
-            <Text>Currency Services |</Text>
-            <Text>Travel, Tourism &amp; Hospitality Services |</Text>
-            <Text>Mining &amp; Minerals Production |</Text>
-            <Text>Financial Technology</Text>
+            <Flex
+              flexDir="column"
+              align={{ base: "center", md: "Flex-start", xl: "flex-start" }}
+              justify={{ base: "", md: "flex-start", xl: "flex-end" }}
+              spacing={1}
+              color="#E6EEEB"
+              fontSize={{ base: "sm", md: "20px" }}
+              fontWeight={700}
+              zIndex={2}
+            >
+              <Link
+                color="#fff"
+                textDecoration="none"
+                href="/businesses/currency"
+              >
+                <Text _hover={{ scale: "110%" }} transition="0.3s ease-in-out">
+                  Currency Services |
+                </Text>
+              </Link>
+
+              <Link
+                color="#fff"
+                textDecoration="none"
+                href="/businesses/ethical-mining"
+              >
+                <Text _hover={{ scale: "110%" }} transition="0.3s ease-in-out">
+                  Travel, Tourism &amp; Hospitality Services |
+                </Text>
+              </Link>
+
+              <Link
+                color="#fff"
+                textDecoration="none"
+                href="/businesses/travels"
+              >
+                <Text _hover={{ scale: "110%" }} transition="0.3s ease-in-out">
+                  Mining &amp; Minerals Production |
+                </Text>
+              </Link>
+
+              <Link
+                color="#fff"
+                textDecoration="none"
+                href="/businesses/fintech"
+              >
+                <Text _hover={{ scale: "110%" }} transition="0.3s ease-in-out">
+                  Financial Technology
+                </Text>
+              </Link>
+            </Flex>
           </Flex>
-        </Flex>
+        </motion.div>
       </Container>
     </Flex>
   );

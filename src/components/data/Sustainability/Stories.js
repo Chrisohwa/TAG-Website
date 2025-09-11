@@ -20,6 +20,7 @@ import {
   IoPlayForward,
   IoPlayBack,
 } from "react-icons/io5";
+import { motion } from "framer-motion";
 
 const Stories = () => {
   const [play, setPlay] = useState(false);
@@ -67,7 +68,11 @@ const Stories = () => {
       zIndex={1}
       mb={{ base: "-48px", md: "", xl: "" }}
     >
-      <Container maxW="1350px" px={{ base: "10px", md: "15px", xl: "0px" }}>
+      <Container
+        maxW="1350px"
+        px={{ base: "10px", md: "15px", xl: "0px" }}
+        id="stories"
+      >
         <Flex
           align="center"
           justify="space-between"
@@ -75,135 +80,148 @@ const Stories = () => {
           gap="40px"
         >
           {/* LEFT TEXT CONTENT */}
-          <Box flex="1">
-            <Heading
-              as="h2"
-              fontSize={{ base: "32px", md: "32px", xl: "64px" }}
-              fontWeight="600"
-              color="black"
-              mb="20px"
-            >
-              Stories from the Field
-            </Heading>
-            <Text
-              fontSize={{ base: "16px", md: "20px", xl: "24px" }}
-              fontWeight="500"
-              lineHeight="38px"
-              color="#002141"
-              mb="30px"
-            >
-              Transalliance Group is a people-first, growth-driven workplace. We
-              value collaboration, innovation, and impact. Join us to shape the
-              future of businesses in emerging economies.
-            </Text>
-
-            <Button
-              bg="#0040D8"
-              color="#fff"
-              px="30px"
-              py="18px"
-              fontSize="18px"
-              borderRadius="8px"
-              fontWeight="500"
-              _hover={{ bg: "#004ECC" }}
-            >
-              Partner With Us
-            </Button>
-          </Box>
-
-          <Box
-            flex="1"
-            position="relative"
-            display="flex"
-            justifyContent="center"
-            role="group" // 👈 Move role="group" here
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ x: [-50, 0], opacity: 1 }}
+            transition={{ duration: 1.1 }}
           >
-            {/* Circular video thumbnail */}
-            <Box
-              as="button"
-              position="relative"
-              w={{ base: "full", md: "340px" }}
-              h={{ base: "260px", md: "340px" }}
-              borderRadius={{ base: "22px", md: "full" }}
-              overflow="hidden"
-              boxShadow="xl"
-              cursor="pointer"
-              onClick={handleTogglePlay}
-            >
-              <video
-                ref={videoRef}
-                muted
-                loop
-                playsInline
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  transition: "opacity 0.5s ease-in-out",
-                }}
+            <Box flex="1">
+              <Heading
+                as="h2"
+                fontSize={{ base: "32px", md: "32px", xl: "54px" }}
+                fontWeight="600"
+                color="#090808"
+                mb="20px"
               >
-                <source src="/images/landing/dusk.mp4" type="video/mp4" />
-              </video>
+                Stories from the Field
+              </Heading>
+              <Text
+                fontSize={{ base: "16px", md: "20px", xl: "24px" }}
+                fontWeight="500"
+                lineHeight="38px"
+                color="#002141"
+                mb="30px"
+              >
+                Transalliance Group is a people-first, growth-driven workplace.
+                We value collaboration, innovation, and impact. Join us to shape
+                the future of businesses in emerging economies.
+              </Text>
 
-              {/* Play/Pause button overlay */}
-              <Flex
-                position="absolute"
-                top="50%"
-                left="50%"
-                transform="translate(-50%, -50%)"
-                w="70px"
-                h="70px"
-                borderRadius="full"
-                bg="white"
-                align="center"
-                justify="center"
-                boxShadow="md"
-                display={play ? "none" : "flex"}
+              <Button
+                bg="#0040D8"
+                color="#fff"
+                px="30px"
+                py="18px"
+                fontSize="18px"
+                borderRadius="8px"
+                fontWeight="500"
+                _hover={{ bg: "#004ECC" }}
               >
-                {play ? <IoPauseSharp size={28} /> : <PiPlayFill size={28} />}
-              </Flex>
+                Partner With Us
+              </Button>
             </Box>
+          </motion.div>
 
-            {/* Controls */}
-            <HStack
-              mt={4}
-              gap="25px"
-              position="absolute"
-              bottom="10%"
-              w="full"
-              justify="center"
-              opacity={0}
-              transition="opacity 0.3s ease"
-              _hover={{ opacity: 1 }} // 👈 Now works
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ x: [50, 0], opacity: 1 }}
+            transition={{ duration: 1.1 }}
+          >
+            <Box
+              flex="1"
+              position="relative"
+              display="flex"
+              justifyContent="center"
+              role="group"
             >
-              <Box as="button" onClick={() => handleSeek(-10)}>
-                <IoPlayBack color="#fff" size={28} />
+              {/* Circular video thumbnail */}
+              <Box
+                as="button"
+                position="relative"
+                w={{ base: "full", md: "full" }}
+                h={{ base: "260px", md: "full" }}
+                borderRadius={{ base: "22px", md: "" }}
+                overflow="hidden"
+                boxShadow="xl"
+                cursor="pointer"
+                onClick={handleTogglePlay}
+              >
+                <video
+                  ref={videoRef}
+                  muted
+                  loop
+                  playsInline
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    transition: "opacity 0.5s ease-in-out",
+                  }}
+                  controls
+                >
+                  <source src="/images/landing/dusk.mp4" type="video/mp4" />
+                </video>
+
+                {/* Play/Pause button overlay */}
+                <Flex
+                  position="absolute"
+                  top="50%"
+                  left="50%"
+                  transform="translate(-50%, -50%)"
+                  w="70px"
+                  h="70px"
+                  borderRadius="full"
+                  bg="white"
+                  align="center"
+                  justify="center"
+                  boxShadow="md"
+                  display={play ? "none" : "flex"}
+                >
+                  {play ? <IoPauseSharp size={28} /> : <PiPlayFill size={28} />}
+                </Flex>
               </Box>
 
-              <Box as="button" onClick={handleTogglePlay}>
-                {play ? (
-                  <IoPauseSharp color="#fff" size={28} />
-                ) : (
-                  <IoPlaySharp color="#fff" size={28} />
-                )}
-              </Box>
+              {/* Controls */}
+              <HStack
+                mt={4}
+                gap="25px"
+                position="absolute"
+                bottom="10%"
+                w="full"
+                justify="center"
+                opacity={0}
+                transition="opacity 0.3s ease"
+                _hover={{ opacity: 1 }} // 👈 Now works
+              >
+                <Box as="button" onClick={() => handleSeek(-10)}>
+                  <IoPlayBack color="#fff" size={28} />
+                </Box>
 
-              <Box as="button" onClick={() => handleSeek(10)}>
-                <IoPlayForward color="#fff" size={28} />
-              </Box>
-            </HStack>
+                <Box as="button" onClick={handleTogglePlay}>
+                  {play ? (
+                    <IoPauseSharp color="#fff" size={28} />
+                  ) : (
+                    <IoPlaySharp color="#fff" size={28} />
+                  )}
+                </Box>
 
-            {/* Decorative Dots PNG */}
-            <Image
-              src="/images/sustainability/dots.png"
-              alt="decorative dots"
-              position="absolute"
-              right="-60px"
-              bottom="10px"
-              w={{ base: "120px", md: "160px" }}
-              pointerEvents="none"
-            />
-          </Box>
+                <Box as="button" onClick={() => handleSeek(10)}>
+                  <IoPlayForward color="#fff" size={28} />
+                </Box>
+              </HStack>
+
+              {/* Decorative Dots PNG */}
+              <Image
+                src="/images/sustainability/dots.png"
+                alt="decorative dots"
+                position="absolute"
+                right="-60px"
+                bottom="10px"
+                w={{ base: "120px", md: "160px" }}
+                pointerEvents="none"
+              />
+            </Box>
+          </motion.div>
         </Flex>
       </Container>
     </Box>

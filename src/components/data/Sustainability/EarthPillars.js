@@ -9,6 +9,7 @@ import {
   Button,
 } from "@chakra-ui/react";
 import React from "react";
+import { motion } from "framer-motion";
 
 const EarthPillars = () => {
   return (
@@ -20,6 +21,7 @@ const EarthPillars = () => {
       py={{ base: 5, md: 40 }}
       minH={{ base: "60vh", md: "70vh", xl: "100vh" }}
       zIndex={1}
+      id="pillars"
     >
       <Container maxW="1350px" px={{ base: "10px", md: "15px", xl: "0px" }}>
         <Heading
@@ -37,6 +39,7 @@ const EarthPillars = () => {
           pt={{ base: "10px", xl: "0px" }}
         >
           {/* left side text */}
+
           <Flex
             align="stretch"
             p={2}
@@ -153,6 +156,7 @@ const EarthPillars = () => {
           </Flex>
 
           {/* Right side images */}
+
           <Flex
             flexDir="column"
             gapY="40px"
@@ -167,48 +171,69 @@ const EarthPillars = () => {
             flexBasis="50%"
             mx="auto"
           >
-            <Image
-              src="/images/sustainability/greenland.jpg"
-              alt="greenland"
-              borderRadius="22px"
-              objectFit="cover"
-              w={{ base: "100%", md: "full", lg: "528px", xl: "628px" }}
-              h="181px"
-            />
-
-            <Flex justify="flex-end" w="full" >
-              <Image
-                src="/images/sustainability/map.jpg"
-                alt="map"
-                borderRadius="22px"
-                objectFit="cover"
-                w={{ base: "100%", md: "full", lg: "210px", xl: "567px" }}
-                h="352px"
-              />
-            </Flex>
-
-            <Flex
-              position={{ base: "relative", md: "absolute" }}
-              bottom={{ base: "0px", md: "-340px", xl: "-90px" }}
-              left={{ base: "0px", md: "0px", xl: "0px" }}
-              bg="#fff"
-              w={{ base: "100%", md: "full", lg: "210px", xl: "290px" }}
-              h={{ base: "", md: "", lg: "", xl: "289px" }}
-              justify="flex-end"
-              zIndex={0}
-              borderRadius="22px"
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ y: [-60, 0], opacity: 1 }}
+              transition={{ duration: 1.1 }}
             >
               <Image
-                src="/images/sustainability/stats.jpg"
-                alt="stats"
-                objectFit="cover"
-                w={{ base: "100%", md: "95%", xl:"290px" }}
-                h={{ base: "250px", md: "280px" }}
+                src="/images/sustainability/greenland.jpg"
+                alt="greenland"
                 borderRadius="22px"
-                m={3}
-                zIndex={1}
+                objectFit="cover"
+                w={{ base: "100%", md: "full", lg: "528px", xl: "628px" }}
+                h="181px"
+                loading="lazy"
               />
-            </Flex>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ x: [60, 0], opacity: 1 }}
+              transition={{ duration: 1.1 }}
+            >
+              <Flex justify="flex-end" w="full">
+                <Image
+                  src="/images/sustainability/map.jpg"
+                  alt="map"
+                  borderRadius="22px"
+                  objectFit="cover"
+                  w={{ base: "100%", md: "full", lg: "210px", xl: "567px" }}
+                  h="352px"
+                  loading="lazy"
+                />
+              </Flex>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ y: [60, 0], opacity: 1 }}
+              transition={{ duration: 1.1 }}
+            >
+              <Flex
+                position={{ base: "relative", md: "absolute" }}
+                bottom={{ base: "0px", md: "-340px", xl: "-90px" }}
+                left={{ base: "0px", md: "0px", xl: "0px" }}
+                bg="#fff"
+                w={{ base: "100%", md: "full", lg: "210px", xl: "290px" }}
+                h={{ base: "", md: "", lg: "", xl: "289px" }}
+                justify="flex-end"
+                zIndex={0}
+                borderTopRightRadius="22px"
+              >
+                <Image
+                  src="/images/sustainability/stats.jpg"
+                  alt="stats"
+                  objectFit="cover"
+                  w={{ base: "100%", md: "95%", xl: "290px" }}
+                  h={{ base: "250px", md: "280px" }}
+                  borderRadius="22px"
+                  m={3}
+                  zIndex={1}
+                  loading="lazy"
+                />
+              </Flex>
+            </motion.div>
 
             <Flex
               display={{ base: "none", md: "none", xl: "flex" }}

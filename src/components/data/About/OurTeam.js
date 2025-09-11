@@ -7,14 +7,17 @@ import {
   SimpleGrid,
   Text,
   VStack,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import TeamCard from "./TeamCard";
 import { teamData } from "../../common/constants";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const OurTeam = () => {
   const navigate = useNavigate();
-  const groupIds = ["leadership", "ceos", "management"];
+  // const groupIds = ["leadership", "ceos", "management"];
+  const [isMobile] = useMediaQuery("(max-width: 800px)");
   return (
     <Box
       bgGradient="to-b"
@@ -22,8 +25,8 @@ const OurTeam = () => {
       gradientTo="#002b53"
       py={16}
       className="full_width"
-      // id="leadership"
       mb={{ base: "-50px", md: "-50px", xl: "0px" }}
+      id="team"
     >
       <Container maxW="1350px" px={{ base: "10px", md: "15px", xl: "0px" }}>
         {/* Section Heading */}
@@ -43,9 +46,9 @@ const OurTeam = () => {
             exceptional results for every client.
           </Text>
         </VStack>
-
+        {/* dynamic mapping of id id={groupIds[idx]} */}
         {teamData.map((team, idx) => (
-          <Box key={idx} mb={12} id={groupIds[idx]}>
+          <Box key={idx} mb={12}>
             {/* Yellow Tag */}
             <Flex w="full" justify={idx % 2 === 0 ? "flex-start" : "flex-end"}>
               <Flex
@@ -84,16 +87,31 @@ const OurTeam = () => {
               columns={{ base: "2", md: "2", lg: "3", xl: "4" }}
               gap="20px"
             >
-              {team.members.map((member, mIdx) => (
-                <TeamCard
-                  key={member.id}
-                  img={member.img}
-                  name={member.name}
-                  title={member.title}
-                  onClick={() =>
-                    navigate(`/about-us/member-details/${member.id}`)
-                  }
-                />
+              {team.members.map((member, index) => (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{
+                    x: isMobile
+                      ? index % 2 === 0
+                        ? [-50, 0]
+                        : [50, 0]
+                      : index < 3
+                        ? [-50, 0]
+                        : [50, 0],
+                    opacity: 1,
+                  }}
+                  transition={{ duration: 1 }}
+                >
+                  <TeamCard
+                    key={member.id}
+                    img={member.img}
+                    name={member.name}
+                    title={member.title}
+                    onClick={() =>
+                      navigate(`/about-us/member-details/${member.id}`)
+                    }
+                  />
+                </motion.div>
               ))}
             </SimpleGrid>
           </Box>

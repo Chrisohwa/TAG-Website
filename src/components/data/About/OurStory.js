@@ -31,7 +31,7 @@ const OurStory = () => {
     {
       year: "2020",
       side: "right",
-      title: "Rebranding",
+      title: "Strategic Rebranding",
       desc: `A strategic rebrand transformed Fazo Group into Transalliance Group,
                  marking its formal entry into the financial services industry. 
                  This evolution led to the establishment of Transalliance Capital in December 2020,
@@ -40,20 +40,21 @@ const OurStory = () => {
     {
       year: "2020",
       side: "left",
-      title: "Strategic Expansion",
-      desc: `Transalliance Group broadened its portfolio with the creation of three specialized subsidiaries:
-                Transalliance Minerals – Focused on ethical mining & minerals production.
-                Mondu Inc. - A Cross-boarder payment technology platform.
+      title: "Expansion",
+      desc: `Transalliance Group broadened its portfolio with the creation of three specialized subsidiaries:</br> </br>
+                Transalliance Minerals – Focused on ethical mining & minerals production.</br>
+                Mondu Inc. - A Cross-boarder payment technology platform.</br>
                 AlliancePay - A secure payment facilitation platform.`,
     },
     {
       year: "2020",
       side: "right",
-      title: "Rebranding",
+      title: "The Group",
       desc: `In 2022, TransMinerals secured an exploration license from the Federal Government of Nigeria, 
-                further strengthening its industry position with a 25-year mining lease in 2023.
-                The Group entered the financial technology space by launching AlliancePay, a payment facilitation 
-                company for businesses, culminating in the acquisition of a PSSP License from the Central Bank of Nigeria.`,
+              further strengthening its industry position with a 25-year mining lease in 2023.</br></br>
+              
+              The Group entered the financial technology space by launching AlliancePay, a payment facilitation 
+              company for businesses, culminating in the acquisition of a PSSP License from the Central Bank of Nigeria.`,
     },
   ];
   return (
@@ -64,6 +65,7 @@ const OurStory = () => {
       bgSize="contain"
       bgPosition="right"
       py={16}
+      id="milestones"
     >
       <Container
         maxW="1350px"
@@ -78,16 +80,16 @@ const OurStory = () => {
           Our Story
         </Heading>
         <Text
-          fontSize="20px"
+          fontSize="18px"
+          maxW="1216px"
           fontWeight={500}
           color="#002C56"
           lineHeight="27px"
         >
-          Founded on the principles of innovation and collaboration, ABC Company
-          was created to bridge the gap between complex engineering challenges
-          and simplified solutions. Over the years, we've grown into a global
-          team of experts passionate about helping businesses scale, innovate,
-          and thrive in an ever-changing digital landscape.
+          At Transalliance Group, our interests span industries vital to the
+          future of global emerging markets. We deliver lasting value across key
+          sectors by integrating cutting-edge innovation, responsible practices,
+          and a people-first approach.
         </Text>
       </Container>
 
@@ -96,7 +98,7 @@ const OurStory = () => {
         py={{ base: "", md: "", xl: "50px" }}
         px={{ base: "10px", md: "15px", xl: "0px" }}
         display={{ base: "none", md: "block", xl: "block" }}
-        mb={{base:"", md:"", xl:"200px"}}
+        mb={{ base: "", md: "", xl: "200px" }}
       >
         <Flex position="relative" w="full" h="60%" justify="center">
           {/* Vertical Orange Line */}
@@ -168,16 +170,30 @@ const OurStory = () => {
                       fontWeight={400}
                       color="#517193"
                       textAlign={item.side === "left" ? "right" : "left"}
-                    >
-                      {item.desc}
-                    </Text>
+                      dangerouslySetInnerHTML={{ __html: item.desc }}
+                    />
                   </Box>
                 </Flex>
               </Flex>
             ))}
           </Flex>
         </Flex>
+
+        <Text
+          fontSize={{ base: "20px", md: "20px", xl: "24px" }}
+          mt={{ base: "20px", md: "20px", xl: "30px" }}
+          maxW="1208px"
+          fontWeight={500}
+          color="#002C56"
+          lineHeight="45px"
+        >
+          With the full acquisition of a CBN license for AlliancePay,
+          Transalliance Group is poised to explore new frontiers, leveraging
+          innovation and strategic investments to redefine industry standards
+          across its diverse business verticals.
+        </Text>
       </Container>
+
       <Container
         display={{ base: "block", md: "none", xl: "none" }}
         maxW="1350px"
@@ -225,6 +241,7 @@ const OurStory = () => {
                     maxW="500px"
                     color="#517193"
                     textAlign="justify"
+                    whiteSpace="pre-line"
                   >
                     {item.desc}
                   </Text>

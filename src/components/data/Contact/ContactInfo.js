@@ -13,6 +13,7 @@ import {
   Center,
 } from "@chakra-ui/react";
 import { FiPhone, FiMail, FiMapPin, FiClock } from "react-icons/fi";
+import { motion } from "framer-motion";
 
 const ContactCard = ({ icon, title, contactLink, details }) => {
   const isClickable =
@@ -112,9 +113,9 @@ const ContactInfo = () => {
     <Box
       className="full_width"
       minH={{ base: "40vh", md: "60vh", xl: "100vh" }}
-      pt={{ base: 10, md: 20, xl:"169px" }}
-    //   mt={{ base: "-25px", md: "-55px", xl: "0px" }}
-    //   mb={{ base: "-50px", md: "px", xl: "px" }}
+      pt={{ base: 10, md: 20, xl: "169px" }}
+      //   mt={{ base: "-25px", md: "-55px", xl: "0px" }}
+      //   mb={{ base: "-50px", md: "px", xl: "px" }}
       bgGradient="to-tl"
       gradientTo="#447099"
       gradientFrom="#fff 60%"
@@ -154,7 +155,14 @@ const ContactInfo = () => {
             justifyItems="center"
           >
             {contactList.map((contact, i) => (
-              <ContactCard key={i} {...contact} />
+              <motion.div
+                key={i}
+                initial={{ opacity: 0 }}
+                whileInView={{ y: [50, 0], opacity: 1 }}
+                transition={{ duration: 1 }}
+              >
+                <ContactCard key={i} {...contact} />
+              </motion.div>
             ))}
           </Grid>
         </VStack>

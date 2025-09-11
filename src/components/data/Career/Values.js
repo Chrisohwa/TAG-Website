@@ -6,6 +6,7 @@ import {
   FiAward,
   FiStar,
 } from "react-icons/fi";
+import { motion } from "framer-motion";
 
 
 // card component
@@ -13,16 +14,17 @@ import {
 const ValueCard = ({ icon, title, description }) => {
   return (
     <Box
-      
       w={{ base: "full", md: "220px", xl: "390px" }}
-      h={{base:"248px", md:"248px", xl:"248px"}}
+      h={{ base: "248px", md: "248px", xl: "248px" }}
       borderRadius="12px"
       bg="#fff"
       boxShadow="sm"
       p="24px"
       display="flex"
       flexDirection="column"
-      gap={{base:"16px", md:"0px", xl:"16px"}}
+      gap={{ base: "16px", md: "0px", xl: "16px" }}
+      _hover={{ scale: "105%", bg: "#d3dde6" }}
+      transition="0.3s ease-in-out"
     >
       {/* Icon */}
       <Box
@@ -104,9 +106,9 @@ const Values = () => {
       bgGradient="to-t"
       gradientTo="#003b73 "
       gradientFrom="#fff 40%"
-      py={{ base: 10, md: 20 }}
+      py={{ base: 10, md: 20, xl: "150px" }}
       mt={{ base: "0px", md: "0px", lg: "0px", xl: "0px" }}
-      id=""
+      id="core-values"
     >
       <Container maxW="1350px" px={{ base: "10px", md: "15px", xl: "0px" }}>
         <Flex
@@ -151,12 +153,18 @@ const Values = () => {
             gap="32px"
           >
             {value.slice(0, 3).map((v, i) => (
-              <ValueCard
-                key={i}
-                icon={v.icon}
-                title={v.title}
-                description={v.description}
-              />
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ x: [60, 0], opacity: 1 }}
+                transition={{ duration: 1.1 }}
+              >
+                <ValueCard
+                  key={i}
+                  icon={v.icon}
+                  title={v.title}
+                  description={v.description}
+                />
+              </motion.div>
             ))}
           </Grid>
         </Box>
@@ -171,12 +179,18 @@ const Values = () => {
           mx="auto"
         >
           {value.slice(3).map((v, i) => (
-            <ValueCard
-              key={i + 3}
-              icon={v.icon}
-              title={v.title}
-              description={v.description}
-            />
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ x: [-60, 0], opacity: 1 }}
+              transition={{ duration: 1.1 }}
+            >
+              <ValueCard
+                key={i + 3}
+                icon={v.icon}
+                title={v.title}
+                description={v.description}
+              />
+            </motion.div>
           ))}
         </Flex>
       </Container>
