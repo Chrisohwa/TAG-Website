@@ -8,8 +8,10 @@ import {
   Container,
 } from "@chakra-ui/react";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Partner = () => {
+  const navigate = useNavigate();
   return (
     <Box
       mt={{ base: 0, md: 0, xl: "0px" }}
@@ -22,17 +24,17 @@ const Partner = () => {
     >
       <Container maxW="1350px" px={{ base: "10px", md: "15px", xl: "0px" }}>
         <Flex
-          justify={{ base: "center", md: "center", xl: "space-between" }}
+          justify={{ base: "center", md: "space-between", xl: "space-between" }}
           align={{ base: "center", md: "center", xl: "center" }}
           gap="10px"
         >
           <Flex
             direction="column"
-            align={{ base: "center", md: "center", xl: "flex-start" }}
-            justify={{ base: "center", md: "center", xl: "flex-start" }}
-            gapY={3}
-            textAlign={{ base: "center", md: "center", xl: "left" }}
-            bg="transparent" // Ensure inner content doesn’t block gradient
+            align={{ base: "flex-start", md: "flex-start", xl: "flex-start" }}
+            justify={{ base: "flex-start", md: "flex-start", xl: "flex-start" }}
+            gapY={4}
+            textAlign={{ base: "left", md: "left", xl: "left" }}
+            bg="transparent" 
           >
             <Text
               color="#005032"
@@ -44,7 +46,7 @@ const Partner = () => {
             <Heading
               color="#3D3C3C"
               fontWeight={600}
-              fontSize={{ base: "lg", md: "2xl", xl: "30px" }}
+              fontSize={{ base: "24px", md: "2xl", xl: "30px" }}
             >
               Working Together for Africa&apos;s Prosperity
             </Heading>
@@ -70,6 +72,7 @@ const Partner = () => {
               w="287px"
               h="76px"
               fontSize="20px"
+              onClick={() => navigate("/about-us")}
             >
               Learn More About Us
             </Button>
@@ -79,7 +82,11 @@ const Partner = () => {
             display={{ base: "none", md: "block" }}
             py={{ base: 0, md: "30px", xl: "30px" }}
           >
-            <Image src="/images/landing/partners.png" alt="partners" />
+            <Image
+              src="/images/landing/partners.png"
+              alt="partners"
+              w={{ base: "", md: "", xl: "" }}
+            />
           </Flex>
         </Flex>
       </Container>

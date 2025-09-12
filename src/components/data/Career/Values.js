@@ -113,8 +113,8 @@ const Values = () => {
       <Container maxW="1350px" px={{ base: "10px", md: "15px", xl: "0px" }}>
         <Flex
           flexDir="column"
-          justify="center"
-          align="center"
+          justify={{ base: "flex-start", md: "center", xl: "center" }}
+          align={{ base: "flex-start", md: "center", xl: "center" }}
           color="#fff"
           gap={4}
         >
@@ -126,7 +126,7 @@ const Values = () => {
             Our Core Values
           </Heading>
           <Text
-            textAlign={{ base: "center", md: "center", xl: "center" }}
+            textAlign={{ base: "left", md: "center", xl: "center" }}
             fontWeight={400}
             fontSize={{ base: "20px", md: "20px", xl: "20px" }}
             lineHeight="28px"

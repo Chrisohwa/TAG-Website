@@ -10,10 +10,22 @@ import {
 } from "@chakra-ui/react";
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { BsForwardFill } from "react-icons/bs";
 
 const Hero = () => {
   const [isMobile] = useMediaQuery("(max-width: 768px)");
   const [loaded, setLoaded] = useState(false);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
+  const links = [
+    { href: "/businesses/currency", label: "Currency Services" },
+    {
+      href: "/businesses/ethical-mining",
+      label: "Travel, Tourism & Hospitality Services",
+    },
+    { href: "/businesses/travels", label: "Mining & Minerals Production" },
+    { href: "/businesses/fintech", label: "Financial Technology" },
+  ];
   return (
     <Flex
       position="relative"
@@ -62,7 +74,7 @@ const Hero = () => {
       {/* Content container */}
       <Container
         maxW="1350px"
-        mt={{ base: "0px", md: "0px", xl: "55px" }}
+        mt={{ base: "0px", md: "0px", xl: "0px" }}
         pl="0px"
       >
         <Flex
@@ -85,8 +97,8 @@ const Hero = () => {
               fontSize={{ base: "2xl", md: "4xl", lg: "63px" }}
               fontWeight={700}
               maxW={{ base: "90%", md: "500px", lg: "845px" }}
-              lineHeight={{ base: "1.1", md: "84px" }}
-              textAlign={{ base: "center", md: "left", lg: "left" }}
+              lineHeight={{ base: "30px", md: "50px", xl:"84px" }}
+              textAlign={{ base: "left", md: "left", lg: "left" }}
             >
               Engineering Business Innovations for the Future
             </Heading>
@@ -96,7 +108,7 @@ const Hero = () => {
 
       <Container
         maxW="1350px"
-        mt={{ base: "0px", md: "120px", xl: "60px" }}
+        mt={{ base: "0px", md: "120px", xl: "20px" }}
         pr="0px"
       >
         <motion.div
@@ -109,57 +121,44 @@ const Hero = () => {
             w="full"
             pr={{ base: 4, md: 2, xl: "60px" }}
             zIndex={1}
-            justify={{ base: "center", md: "flex-end" }}
+            justify={{ base: "flex-start", md: "flex-end" }}
           >
             <Flex
               flexDir="column"
-              align={{ base: "center", md: "Flex-start", xl: "flex-start" }}
-              justify={{ base: "", md: "flex-start", xl: "flex-end" }}
-              spacing={1}
-              color="#E6EEEB"
-              fontSize={{ base: "sm", md: "20px" }}
+              align={{ base: "flex-start", md: "flex-start", xl: "flex-start" }}
+              fontSize={{ base: "sm", md: "24px" }}
               fontWeight={700}
               zIndex={2}
+              color="#E6EEEB"
             >
-              <Link
-                color="#fff"
-                textDecoration="none"
-                href="/businesses/currency"
-              >
-                <Text _hover={{ scale: "110%" }} transition="0.3s ease-in-out">
-                  Currency Services |
-                </Text>
-              </Link>
+              {links.map((link, index) => (
+                <Flex
+                  key={index}
+                  gap="20px"
+                  justify={{ base: "flex-start", md: "", xl: "center" }}
+                  align={{ base: "flex-start", md: "", xl: "center" }}
+                  onMouseEnter={() => setHoveredIndex(index)}
+                  onMouseLeave={() => setHoveredIndex(null)}
+                >
+                  <Link color="#fff" textDecoration="none" href={link.href}>
+                    <Text
+                      transition="0.3s ease-in-out"
+                      _hover={{
+                        transform: "scale(1.05)",
+                        textDecoration: "underline",
+                      }}
+                    >
+                      {link.label}
+                    </Text>
+                  </Link>
 
-              <Link
-                color="#fff"
-                textDecoration="none"
-                href="/businesses/ethical-mining"
-              >
-                <Text _hover={{ scale: "110%" }} transition="0.3s ease-in-out">
-                  Travel, Tourism &amp; Hospitality Services |
-                </Text>
-              </Link>
-
-              <Link
-                color="#fff"
-                textDecoration="none"
-                href="/businesses/travels"
-              >
-                <Text _hover={{ scale: "110%" }} transition="0.3s ease-in-out">
-                  Mining &amp; Minerals Production |
-                </Text>
-              </Link>
-
-              <Link
-                color="#fff"
-                textDecoration="none"
-                href="/businesses/fintech"
-              >
-                <Text _hover={{ scale: "110%" }} transition="0.3s ease-in-out">
-                  Financial Technology
-                </Text>
-              </Link>
+                  {hoveredIndex === index && (
+                    <Box mt="10px" transition="0.3s">
+                      <BsForwardFill size={20} color="#fff" />
+                    </Box>
+                  )}
+                </Flex>
+              ))}
             </Flex>
           </Flex>
         </motion.div>

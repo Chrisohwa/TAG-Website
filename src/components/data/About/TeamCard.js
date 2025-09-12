@@ -2,7 +2,7 @@ import { Box, Image, Text, VStack } from "@chakra-ui/react";
 
 
 
-const TeamCard = ({onClick, img, name, title }) => {
+const TeamCard = ({onClick, img, name, title, newColor }) => {
     
   return (
     <VStack spacing={2} align="start" cursor="pointer" onClick={onClick}>
@@ -12,15 +12,15 @@ const TeamCard = ({onClick, img, name, title }) => {
         borderRadius="md"
         objectFit="cover"
         objectPosition="top center"
-        w="100%"
-        h="333px"
+        w={{ base: "180px", md: "350px", xl: "640px" }}
+        h={{ base: "200px", md: "333px", xl: "641px" }}
         _hover={{ scale: "105%", transition: "0.3s ease-in-out" }}
       />
       <Text
         fontWeight={500}
         lineHeight="80%"
-        fontSize="28px"
-        color="#001A32"
+        fontSize={{ base: "20px", md: "24px", xl: "28px" }}
+        color={newColor}
         transition="0.3s ease-in-out"
         _hover={{
           transform: "scale(1.05)",
@@ -28,7 +28,12 @@ const TeamCard = ({onClick, img, name, title }) => {
       >
         {name}
       </Text>
-      <Text fontSize="20px" color="#001A32" lineHeight="70%%" fontWeight="500">
+      <Text
+        fontSize={{ base: "14px", md: "16px", xl: "18px" }}
+        color={newColor}
+        lineHeight="20px"
+        fontWeight="400"
+      >
         {title}
       </Text>
     </VStack>

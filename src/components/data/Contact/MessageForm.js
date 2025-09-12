@@ -28,7 +28,11 @@ const MessageForm = () => {
       pb={{ base: "", md: "", xl: "50px" }}
       mt={{ base: "", md: "", xl: "-200px" }}
     >
-      <Container maxW="1350px" px={{ base: "10px", md: "15px", xl: "0px" }}>
+      <Container
+        maxW="1350px"
+        px={{ base: "10px", md: "15px", xl: "0px" }}
+        id="send-us-a-message"
+      >
         <VStack gap="64px">
           <Flex
             flexDir="column"

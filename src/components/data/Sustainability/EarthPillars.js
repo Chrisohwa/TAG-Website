@@ -9,9 +9,11 @@ import {
   Button,
 } from "@chakra-ui/react";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const EarthPillars = () => {
+  const navigate = useNavigate();
   return (
     <Box
       className="full_width"
@@ -149,6 +151,7 @@ const EarthPillars = () => {
                 w="287px"
                 h="76px"
                 fontSize="20px"
+                onClick={() => navigate("/about-us")}
               >
                 Learn More About Us
               </Button>
@@ -181,7 +184,7 @@ const EarthPillars = () => {
                 alt="greenland"
                 borderRadius="22px"
                 objectFit="cover"
-                w={{ base: "100%", md: "full", lg: "528px", xl: "628px" }}
+                w={{ base: "370px", md: "full", lg: "528px", xl: "628px" }}
                 h="181px"
                 loading="lazy"
               />
@@ -192,13 +195,16 @@ const EarthPillars = () => {
               whileInView={{ x: [60, 0], opacity: 1 }}
               transition={{ duration: 1.1 }}
             >
-              <Flex justify="flex-end" w="full">
+              <Flex
+                justify={{ base: "center", md: "flex-end", xl: "flex-end" }}
+                w={{ base: "370px", md: "full", xl: "628px" }}
+              >
                 <Image
                   src="/images/sustainability/map.jpg"
                   alt="map"
                   borderRadius="22px"
                   objectFit="cover"
-                  w={{ base: "100%", md: "full", lg: "210px", xl: "567px" }}
+                  w={{ base: "370px", md: "full", lg: "210px", xl: "567px" }}
                   h="352px"
                   loading="lazy"
                 />
@@ -215,17 +221,17 @@ const EarthPillars = () => {
                 bottom={{ base: "0px", md: "-340px", xl: "-90px" }}
                 left={{ base: "0px", md: "0px", xl: "0px" }}
                 bg="#fff"
-                w={{ base: "100%", md: "full", lg: "210px", xl: "290px" }}
+                w={{ base: "370px", md: "full", lg: "210px", xl: "290px" }}
                 h={{ base: "", md: "", lg: "", xl: "289px" }}
                 justify="flex-end"
                 zIndex={0}
                 borderTopRightRadius="22px"
               >
                 <Image
-                  src="/images/sustainability/stats.jpg"
+                  src="/images/sustainability/stats.png"
                   alt="stats"
                   objectFit="cover"
-                  w={{ base: "100%", md: "95%", xl: "290px" }}
+                  w={{ base: "370px", md: "95%", xl: "290px" }}
                   h={{ base: "250px", md: "280px" }}
                   borderRadius="22px"
                   m={3}

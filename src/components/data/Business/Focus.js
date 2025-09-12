@@ -9,13 +9,13 @@ const Focus = () => {
       className="full_width"
       align="center"
       justify="center"
-      h={{ base: "60vh", xl: "100vh" }}
+      minH={{ base: "20vh", md: "60vh", xl: "100vh" }}
     >
       <Container maxW="1350px" px={{ base: "10px", md: "15px", xl: "0px" }}>
         <Flex
-          textAlign="center"
+          textAlign={{ base: "left", md: "center", xl: "center" }}
           align="flex-start"
-          justify="center"
+          justify={{ base: "flex-start", md: "center", xl: "center" }}
           fontWeight={400}
           fontSize={{
             base: "20px",

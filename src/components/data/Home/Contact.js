@@ -27,8 +27,12 @@ const Contact = () => {
       className="full_width"
       minH={{ base: "70vh", md: "70vh", xl: "100vh" }}
       bgGradient="to-b"
-      gradientFrom="#fff "
-      gradientTo="#002548ff 50%"
+      gradientFrom={{ base: "#fff ", md: "#fff 5%", xl: "#fff" }}
+      gradientTo={{
+        base: "#002e5b 5%",
+        md: "#002e5b 20%",
+        xl: "#002e5b 0%",
+      }}
       py={{ base: "0px", md: "50px", xl: "40px" }}
       mt={{ base: "-5px", md: "-5px", xl: "0px" }}
       mb={{ base: "-50px", md: "-50px", xl: "0px" }}
@@ -47,8 +51,9 @@ const Contact = () => {
           {/* left */}
           <Flex
             direction="column"
-            align={{ base: "center", md: "flex-start", xl: "flex-start" }}
-            justify={{ base: "center", md: "center", xl: "flex-start" }}
+            align={{ base: "flex-start", md: "flex-start", xl: "flex-start" }}
+            justify={{ base: "flex-start", md: "center", xl: "flex-start" }}
+            mt={{ base: "40px", md: "", xl: "" }}
           >
             <motion.div
               initial={{ opacity: 0 }}
@@ -59,8 +64,9 @@ const Contact = () => {
                 color="#FFBD59"
                 fontSize={{ base: "20px", md: "20px", xl: "20px" }}
                 fontWeight={700}
-                textAlign={{ base: "center", md: "left", xl: "left" }}
-                lineHeight="64px"
+                textAlign={{ base: "left", md: "left", xl: "left" }}
+                lineHeight={{ base: "100%", md: "64px", xl: "64px" }}
+                mb={{ base: "20px", md: "", xl: "" }}
               >
                 Contact Us
               </Text>
@@ -74,9 +80,10 @@ const Contact = () => {
               <Heading
                 color="#fff"
                 fontWeight={600}
-                fontSize={{ base: "26px", md: "26px", xl: "32px" }}
-                textAlign={{ base: "center", md: "left", xl: "left" }}
-                lineHeight="64px"
+                fontSize={{ base: "24px", md: "26px", xl: "32px" }}
+                textAlign={{ base: "left", md: "left", xl: "left" }}
+                lineHeight={{ base: "100%", md: "64px", xl: "64px" }}
+                mb={{ base: "20px", md: "", xl: "" }}
               >
                 Let&apos;s Create the Future Together
               </Heading>
@@ -89,10 +96,10 @@ const Contact = () => {
             >
               <Text
                 fontWeight={500}
-                fontSize="20px"
+                fontSize={{ base: "16px", md: "20px", xl: "20px" }}
                 color="#fff"
                 maxW={{ base: "100%", md: "380px", xl: "545px" }}
-                textAlign={{ base: "center", md: "left", xl: "left" }}
+                textAlign={{ base: "left", md: "left", xl: "left" }}
                 mb={4}
               >
                 Whether you&apos;re looking to collaborate, learn more about our
@@ -108,8 +115,16 @@ const Contact = () => {
             >
               <Flex
                 direction="column"
-                align={{ base: "center", md: "flex-start", xl: "flex-start" }}
-                justify={{ base: "center", md: "flex-start", xl: "flex-start" }}
+                align={{
+                  base: "flex-start",
+                  md: "flex-start",
+                  xl: "flex-start",
+                }}
+                justify={{
+                  base: "flex-start",
+                  md: "flex-start",
+                  xl: "flex-start",
+                }}
                 as="ul"
                 color="#fff"
                 w="100%"
@@ -119,8 +134,8 @@ const Contact = () => {
                   as="li"
                   listStyle="disc"
                   ml={{ base: "0", md: "17px", xl: "17px" }}
-                  fontSize="20px"
-                  textAlign={{ base: "center", md: "left", xl: "left" }}
+                  fontSize={{ base: "16px", md: "20px", xl: "20px" }}
+                  textAlign={{ base: "left", md: "left", xl: "left" }}
                   lineHeight="34px"
                 >
                   <a href="mailto:info@transalliancegroup.com">
@@ -132,8 +147,8 @@ const Contact = () => {
                   as="li"
                   listStyle="disc"
                   ml={{ base: "0", md: "17px", xl: "17px" }}
-                  fontSize="20px"
-                  textAlign={{ base: "center", md: "left", xl: "left" }}
+                  fontSize={{ base: "16px", md: "20px", xl: "20px" }}
+                  textAlign={{ base: "left", md: "left", xl: "left" }}
                   lineHeight="34px"
                 >
                   <a href="tel:+2348055058367">Phone: +234 805 505 8367</a>
@@ -143,8 +158,8 @@ const Contact = () => {
                   as="li"
                   listStyle="disc"
                   ml={{ base: "0", md: "17px", xl: "17px" }}
-                  fontSize="20px"
-                  textAlign={{ base: "center", md: "left", xl: "left" }}
+                  fontSize={{ base: "16px", md: "20px", xl: "20px" }}
+                  textAlign={{ base: "left", md: "left", xl: "left" }}
                   lineHeight="34px"
                 >
                   Address: 200c Muri Okunola Street VI Lagos.

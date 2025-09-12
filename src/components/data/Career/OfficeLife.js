@@ -10,10 +10,12 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const MotionBox = motion(Box);
 
 const OfficeLife = () => {
+  const navigate = useNavigate();
   const imgEffect = {
     as: "img",
     w: "100%",
@@ -31,7 +33,7 @@ const OfficeLife = () => {
     <Box
       className="full_width"
       minH={{ base: "40vh", md: "60vh" }}
-      py={{ base: 10, md: 20, xl:"150px" }}
+      py={{ base: 10, md: 20, xl: "150px" }}
       mt={{ base: "-25px", md: "-55px", xl: "-55px" }}
     >
       <Container
@@ -39,7 +41,12 @@ const OfficeLife = () => {
         px={{ base: "10px", md: "15px", xl: "0px" }}
         id="life"
       >
-        <Flex flexDir="column" justify="center" align="center" gap={4}>
+        <Flex
+          flexDir="column"
+          justify={{ base: "flex-start", md: "center", xl: "center" }}
+          align={{ base: "flex-start", md: "center", xl: "center" }}
+          gap={4}
+        >
           <Heading
             fontWeight={700}
             fontSize={{ base: "32px", md: "36px", xl: "48px" }}
@@ -49,7 +56,7 @@ const OfficeLife = () => {
             Life at Our Office
           </Heading>
           <Text
-            textAlign={{ base: "", md: "", xl: "center" }}
+            textAlign={{ base: "left", md: "center", xl: "center" }}
             fontWeight={400}
             fontSize="20px"
             lineHeight="28px"
@@ -176,6 +183,7 @@ const OfficeLife = () => {
               w="287px"
               h="76px"
               fontSize="20px"
+              onClick={()=>navigate("/about-us")}
             >
               Learn More About Us
             </Button>

@@ -26,7 +26,7 @@ const BenefitCard = ({ icon, title, text }) => {
   return (
     <Box
       w={{ base: "full", md: "355px", xl: "390px" }}
-      h={{ base: "248px", md: "300px", xl: "319px" }}
+      h={{ base: "300px", md: "300px", xl: "319px" }}
       bgGradient="to-b" // subtle gradient
       gradientFrom="#D6ECFF  100%"
       gradientTo="#001e39"
@@ -121,7 +121,12 @@ const Benefit = () => {
         px={{ base: "10px", md: "15px", xl: "0px" }}
         id="benefits"
       >
-        <Flex flexDir="column" justify="center" align="center" gap={4}>
+        <Flex
+          flexDir="column"
+          justify={{ base: "flex-start", md: "center", xl: "center" }}
+          align={{ base: "flex-start", md: "center", xl: "center" }}
+          gap={4}
+        >
           <Heading
             fontWeight={700}
             fontSize={{ base: "32px", md: "36px", xl: "48px" }}
@@ -131,7 +136,7 @@ const Benefit = () => {
             What benefits are waiting for you?
           </Heading>
           <Text
-            textAlign={{ base: "center", md: "center", xl: "center" }}
+            textAlign={{ base: "left", md: "center", xl: "center" }}
             fontWeight={400}
             fontSize="20px"
             lineHeight="28px"

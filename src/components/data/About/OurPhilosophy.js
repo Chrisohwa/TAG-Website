@@ -44,7 +44,7 @@ const OurPhilosophy = () => {
               transition={{ duration: 1.1 }}
             >
               <Image
-                src="/images/about/philosophy1.jpg"
+                src="/images/about/aboutimg2.png"
                 alt="Happy meeting"
                 borderRadius="md"
                 objectFit="cover"
@@ -70,7 +70,7 @@ const OurPhilosophy = () => {
                 zIndex={0}
               >
                 <Image
-                  src="/images/about/philosophy3.jpg"
+                  src="/images/about/aboutimg3.png"
                   alt="Mission Vision Value"
                   objectFit="contain"
                   w={{ base: "100%", md: "100%" }}
@@ -87,7 +87,7 @@ const OurPhilosophy = () => {
               transition={{ duration: 1.1 }}
             >
               <Image
-                src="/images/about/philosophy2.jpg"
+                src="/images/about/aboutimg1.png"
                 alt="Team clapping"
                 borderRadius="md"
                 objectFit="cover"
@@ -103,7 +103,7 @@ const OurPhilosophy = () => {
             align="stretch"
             p={2}
             borderRadius="md"
-            gap="80px"
+            gap={{base:"30px", md:"50px", xl:"80px"}}
             flexBasis="60%"
             h="100%"
           >
@@ -118,7 +118,7 @@ const OurPhilosophy = () => {
                 Our Philosophy
               </Heading>
               <Text
-                fontSize="24px"
+                fontSize={{ base: "18px", md: "20px", xl: "24px" }}
                 lineHeight="36px"
                 fontWeight={500}
                 color="#002C56"
@@ -137,11 +137,16 @@ const OurPhilosophy = () => {
 
             {/* Vision */}
             <Box>
-              <Heading fontSize="36px" mb={2} fontWeight={700} color="#001A32">
+              <Heading
+                fontSize={{ base: "2xl", md: "36px" }}
+                mb={2}
+                fontWeight={700}
+                color="#001A32"
+              >
                 Our Vision
               </Heading>
               <Text
-                fontSize="24px"
+                fontSize={{ base: "18px", md: "20px", xl: "24px" }}
                 fontWeight={500}
                 lineHeight="36px"
                 color="#002C56"
@@ -152,11 +157,16 @@ const OurPhilosophy = () => {
 
             {/* Mission */}
             <Box>
-              <Heading fontSize="36px" mb={2} fontWeight={700} color="#001A32">
+              <Heading
+                fontSize={{ base: "2xl", md: "36px" }}
+                mb={2}
+                fontWeight={700}
+                color="#001A32"
+              >
                 Our Mission
               </Heading>
               <Text
-                fontSize="24px"
+                fontSize={{ base: "18px", md: "20px", xl: "24px" }}
                 fontWeight={500}
                 lineHeight="36px"
                 color="#002C56"

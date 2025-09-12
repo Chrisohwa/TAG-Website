@@ -91,7 +91,7 @@ export default function SocialSection() {
             gridRow={{ base: "4", md: "3/span 4", xl: "3" }}
             {...hoverAnim}
           >
-            <Box {...imgEffect} src="/images/career/car3.png" alt="car3" />
+            <Box {...imgEffect} src="/images/career/car3.jpg" alt="car3" />
           </MotionBox>
 
           {/* ====== Car4 ====== */}
@@ -109,7 +109,7 @@ export default function SocialSection() {
             gridRow={{ base: "6", md: "4", xl: "1" }}
             {...hoverAnim}
           >
-            <Box {...imgEffect} src="/images/career/car5.png" alt="car5" />
+            <Box {...imgEffect} src="/images/career/car5.jpg" alt="car5" />
           </MotionBox>
 
           {/* ====== Socials ====== */}
@@ -127,7 +127,7 @@ export default function SocialSection() {
           </MotionBox>
 
           {/* ====== Button ====== */}
-          <Box
+          {/* <Box
             gridColumn={{ base: "1", md: "2", xl: "5" }}
             gridRow={{ base: "8", md: "6", xl: "3" }}
             alignSelf="center"
@@ -147,7 +147,7 @@ export default function SocialSection() {
             >
               Learn More About Us
             </Button>
-          </Box>
+          </Box> */}
         </Grid>
       </Container>
     </Box>

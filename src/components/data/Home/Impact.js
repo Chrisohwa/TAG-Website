@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const MotionBox = motion(Box);
 
@@ -87,6 +88,7 @@ const connections = [
 ];
 
 const Impact = () => {
+  const navigate = useNavigate();
   const containerRef = useRef(null);
   const [size, setSize] = useState({ width: 0, height: 0 });
   const [points, setPoints] = useState({});
@@ -153,15 +155,15 @@ const Impact = () => {
       <Container maxW="1350px" px="10px">
         <Flex
           flexDir="column"
-          gap="28px"
-          textAlign="Center"
-          justifyContent="center"
-          align="center"
+          gap={{ base: "10px", md: "20px", xl: "28px" }}
+          textAlign={{ base: "left", md: "center", xl: "center" }}
+          justifyContent={{ base: "flex-start", md: "center", xl: "center" }}
+          align={{ base: "flex-start", md: "center", xl: "center" }}
           w="full"
           px={{ base: "", md: "", xl: "40px" }}
         >
           <Heading color="#00472D" fontWeight={700} fontSize="20px">
-            Our Impact (Sustainability)
+            Corperate Sustainability
           </Heading>
           <Heading
             color="#001A32"
@@ -176,8 +178,8 @@ const Impact = () => {
             fontWeight={500}
             fontSize={{ base: "16px", md: "22px", xl: "24px" }}
             lineHeight="34px"
-            textAlign="center"
-            px="15px"
+            textAlign={{ base: "left", md: "center", xl: "center" }}
+            px={{ base: "0px", md: "15px", xl: "15px" }}
             mb={{ base: "0px", md: "0px", xl: "28px" }}
           >
             From empowering communities to championing ethical mining & minerals
@@ -196,12 +198,13 @@ const Impact = () => {
             py={{ base: "5px", md: "6px", xl: "30px" }}
             w="287px"
             h="76px"
+            onClick={() => navigate("/businesses/ethical-mining")}
           >
             Discover More
           </Button>
         </Flex>
 
-        <Box>
+        <Box py="50px">
           {/* Tablets and laptops */}
 
           {/* <Flex
@@ -213,8 +216,8 @@ const Impact = () => {
             justify="center"
             display={{ base: "none", md: "flex", xl: "flex" }}
           > */}
-            {/* SVG connectors */}
-            {/* {size.width > 0 && (
+          {/* SVG connectors */}
+          {/* {size.width > 0 && (
               <svg
                 width={size.width}
                 height={size.height}
@@ -247,8 +250,8 @@ const Impact = () => {
               </svg>
             )} */}
 
-            {/* ghost image that travels between centers */}
-            {/* {points && Object.keys(points).length > 0 && (
+          {/* ghost image that travels between centers */}
+          {/* {points && Object.keys(points).length > 0 && (
               <MotionBox
                 position="absolute"
                 left={0}
@@ -276,8 +279,8 @@ const Impact = () => {
               </MotionBox>
             )} */}
 
-            {/* circles with borders + labels */}
-            {/* {nodes.map((n, idx) => {
+          {/* circles with borders + labels */}
+          {/* {nodes.map((n, idx) => {
               const center = points[n.id];
               return (
                 <MotionBox
@@ -353,7 +356,6 @@ const Impact = () => {
               );
             })}
           </Flex> */}
-
 
           {/* Mobile devices */}
           {/* <Flex

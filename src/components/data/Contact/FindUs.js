@@ -79,7 +79,7 @@ const FindUs = () => {
       bgGradient="to-b"
       gradientTo="#002548 100%"
       gradientFrom="#fff 20%"
-      id=""
+      id="find-us"
     >
       <Container
         maxW="1350px"

@@ -7,9 +7,15 @@ import {
   Link,
   HStack,
   Container,
+  Heading,
+  Center,
 } from "@chakra-ui/react";
 import { footerList } from "../components/common/constants";
 import { FaTwitter, FaLinkedinIn, FaFacebookF } from "react-icons/fa";
+import { IoChevronForwardOutline } from "react-icons/io5";
+import { FaMapLocationDot } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
+import { PiPhoneCallBold } from "react-icons/pi";
 import { useLocation } from "react-router-dom";
 
 export default function Footer() {
@@ -17,19 +23,19 @@ export default function Footer() {
 
   // Define route-based styles
   const routeStyles = {
-    "/": { bg: "#011b34", color: "#ffffff" },
+    "/": { bg: "#011b34", color: "#2EC5FF" },
     "/about": { bg: "#ffffff", color: "#000000" },
-    "/contact": { bg: "#031D33", color: "#ffffff" },
-    "/career": { bg: "#013669", color: "#ffffff" },
-    default: { bg: "#011b34", color: "#ffffff" },
+    "/contact": { bg: "#031D33", color: "#2EC5FF" },
+    "/career": { bg: "#013669", color: "#2EC5FF" },
+    default: { bg: "#011b34", color: "#2EC5FF" },
   };
 
   const routeStyles2 = {
-    "/": { bg2: "#001e39", color2: "#ffffff" },
+    "/": { bg2: "#001e39", color2: "#2EC5FF" },
     "/about": { bg2: "#ffffff", color2: "#000000" },
-    "/contact": { bg2: "#001e39", color2: "#ffffff" },
-    "/career": { bg2: "#001e39", color2: "#ffffff" },
-    default: { bg2: "#001e39", color2: "#ffffff" },
+    "/contact": { bg2: "#001e39", color2: "#2EC5FF" },
+    "/career": { bg2: "#001e39", color2: "#2EC5FF" },
+    default: { bg2: "#001e39", color2: "#2EC5FF" },
   };
 
   const { bg, color } = routeStyles[location.pathname] || routeStyles.default;
@@ -57,12 +63,12 @@ export default function Footer() {
               xl: "space-between",
             }}
             align="flex-start"
-            flexDir={{ base: "row", md: "row" }}
-            gap="50px"
-            pr={{ base: "0px", md: "0px", xl: "27%" }}
+            flexDir={{ base: "column", md: "row" }}
+            // gap="50px"
+            pr={{ base: "0px", md: "0px", xl: "0px" }}
           >
             {/* Left side */}
-            <Box>
+            <Box w="full">
               <Flex align="center" mb={2}>
                 <Image
                   src="/images/statics/logo.png"
@@ -72,39 +78,133 @@ export default function Footer() {
               </Flex>
 
               <Text
-                maxW={{ base: "150px", md: "350px", xl: "600px" }}
+                maxW={{ base: "full", md: "350px", xl: "800px" }}
                 mb={{ base: "16px", md: "15px", xl: "16px" }}
-                fontSize="24px"
+                fontSize={{ base: "14px", md: "20px", xl: "24px" }}
                 fontWeight={500}
+                color="#fff"
               >
                 Engineering Business Innovations for the Future.
               </Text>
             </Box>
 
             {/* Right side */}
-            <Box>
-              <Box as="ul">
-                {footerList.map((item) => (
-                  <Box
-                    as="li"
-                    listStyle="disc"
-                    key={item.id}
-                    fontSize={{ base: "20px", md: "20px", xl: "24px" }}
-                    fontWeight={500}
-                  >
-                    <Link
-                      href={item.path}
-                      _hover={{ textDecoration: "underline" }}
-                      color={color}
+
+            <Flex
+              w={{ base: "full", md: "", xl: "full" }}
+              justify={{ base: "center", md: "", xl: "space-evenly" }}
+              gap={{ base: "30px", md: "", xl: "" }}
+            >
+              {/* Quick links */}
+              <Box textAlign="left">
+                <Heading
+                  fontWeight={400}
+                  fontSize={{ base: "14px", md: "14px", xl: "18px" }}
+                  color="#FFFFFF"
+                  textDecoration="underline"
+                  mb={3}
+                >
+                  Quick Links
+                </Heading>
+                <Box>
+                  {footerList.map((item) => (
+                    <Flex
+                      key={item.id}
+                      fontSize={{ base: "14px", md: "14px", xl: "16px" }}
+                      fontWeight={400}
+                      align="center"
+                      justify="Flex-start"
+                      gap="10px"
                       mb={3}
                     >
-                      {item.name}
-                    </Link>
-                  </Box>
-                ))}
+                      <Box mt={1}>
+                        <IoChevronForwardOutline color="#2BC1FF" />
+                      </Box>
+                      <Link
+                        href={item.path}
+                        _hover={{ textDecoration: "underline" }}
+                        color="#fff"
+                        opacity="65%"
+                      >
+                        <Text fontWeight={400} textWrap="nowrap">
+                          {item.name}
+                        </Text>
+                      </Link>
+                    </Flex>
+                  ))}
+                </Box>
               </Box>
-            </Box>
+
+              {/* Contact us */}
+              <Box>
+                <Box>
+                  <Heading
+                    fontWeight={400}
+                    fontSize={{ base: "14px", md: "14px", xl: "18px" }}
+                    color="#FFFFFF"
+                    textDecoration="underline"
+                    mb={3}
+                  >
+                    Contact Us
+                  </Heading>
+                </Box>
+
+                <Flex flexDir="column">
+                  <Flex align="center" justify="flex-start" gap="10px" mb={3}>
+                    <Box>
+                      <PiPhoneCallBold color="#2FC6FF" />
+                    </Box>
+                    <Box
+                      fontWeight={400}
+                      fontSize={{ base: "12px", md: "12px", xl: "16px" }}
+                      color="#fff"
+                      opacity="65%"
+                    >
+                      <a href="tel:+2348055058367">+234 805 505 8367</a>
+                    </Box>
+                  </Flex>
+
+                  <Flex align="center" justify="flex-start" gap="10px" mb={3}>
+                    <Box mt={1}>
+                      <MdEmail color="#2FC6FF" />
+                    </Box>
+                    <Box
+                      fontWeight={400}
+                      fontSize={{ base: "12px", md: "12px", xl: "16px" }}
+                      color="#fff"
+                      opacity="65%"
+                    >
+                      <a href="mailto:info@transalliancegroup.com">
+                        info@transalliancegroup.com
+                      </a>
+                    </Box>
+                  </Flex>
+
+                  <Flex
+                    align="flex-start"
+                    justify="flex-start"
+                    gap="10px"
+                    mb={3}
+                  >
+                    <Box mt={1}>
+                      <FaMapLocationDot color="#2FC6FF" />
+                    </Box>
+                    <Box
+                      fontWeight={400}
+                      fontSize={{ base: "12px", md: "12px", xl: "16px" }}
+                    >
+                      <Text maxW="257px" color="#fff" opacity="65%">
+                        200c Muri Okunola, Victoria Island, Lagos, Nigeria.
+                      </Text>
+                    </Box>
+                  </Flex>
+                </Flex>
+              </Box>
+            </Flex>
           </Flex>
+
+          {/* Dividing line */}
+          <Box w="100%" mt={4} border="1px solid rgba(255, 255, 255, 20%)" />
 
           <Flex
             align={{ base: "center", md: "center", xl: "center" }}
@@ -117,23 +217,47 @@ export default function Footer() {
             mt={{ base: "20px", md: "0px", xl: "0px" }}
           >
             {/* Social icons */}
-            <HStack spacing={4} pt={{ base: "5px", md: "10px" }}>
+            <HStack spacing="20px" pt={{ base: "5px", md: "10px" }} mt={4}>
               <Link href="#">
-                <FaTwitter color={color} size={25} />
+                <Center borderRadius="full" border="1px solid #2EC5FF" p="10px">
+                  <FaLinkedinIn color={color} size={15} />
+                </Center>
               </Link>
+
               <Link href="#">
-                <FaLinkedinIn color={color} size={25} />
+                <Center borderRadius="full" border="1px solid #2EC5FF" p="10px">
+                  <FaFacebookF color={color} size={15} />
+                </Center>
               </Link>
+
               <Link href="#">
-                <FaFacebookF color={color} size={25} />
+                <Center borderRadius="full" border="1px solid #2EC5FF" p="10px">
+                  <FaTwitter color={color} size={15} />
+                </Center>
               </Link>
             </HStack>
 
-            {/* <HStack spacing={4} pt={{ base: "20px", md: "10px" }}>
-          <Text>Política de Privacidad</Text>
-          <Text>Términos y Condiciones</Text>
-          <Text>Código de Conducta</Text>
-        </HStack> */}
+            <HStack
+              spacing={4}
+              pt={{ base: "20px", md: "10px" }}
+              pr={{ base: "", md: "", xl: "4%" }}
+            >
+              <Link href="">
+                <Text color="#fff" opacity="90%">
+                  Legal..
+                </Text>
+              </Link>
+              <Link href="">
+                <Text color="#fff" opacity="90%">
+                  Policies...
+                </Text>
+              </Link>
+              <Link href="">
+                <Text color="#fff" opacity="90%">
+                  FAQs...
+                </Text>
+              </Link>
+            </HStack>
           </Flex>
         </Container>
       </Box>

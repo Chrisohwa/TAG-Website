@@ -21,8 +21,10 @@ import {
   IoPlayBack,
 } from "react-icons/io5";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const Stories = () => {
+  const navigate = useNavigate();
   const [play, setPlay] = useState(false);
   const videoRef = useRef(null);
   const [isMuted, setIsMuted] = useState(false);
@@ -75,9 +77,9 @@ const Stories = () => {
       >
         <Flex
           align="center"
-          justify="space-between"
+          justify="flex-start"
           direction={{ base: "column-reverse", md: "row" }}
-          gap="40px"
+          gap="100px"
         >
           {/* LEFT TEXT CONTENT */}
           <motion.div
@@ -85,7 +87,7 @@ const Stories = () => {
             whileInView={{ x: [-50, 0], opacity: 1 }}
             transition={{ duration: 1.1 }}
           >
-            <Box flex="1">
+            <Box flex="1" maxW="583px">
               <Heading
                 as="h2"
                 fontSize={{ base: "32px", md: "32px", xl: "54px" }}
@@ -116,6 +118,7 @@ const Stories = () => {
                 borderRadius="8px"
                 fontWeight="500"
                 _hover={{ bg: "#004ECC" }}
+                onClick={() => navigate("/contact-us/#send-us-a-message")}
               >
                 Partner With Us
               </Button>
@@ -138,15 +141,22 @@ const Stories = () => {
               <Box
                 as="button"
                 position="relative"
-                w={{ base: "full", md: "full" }}
-                h={{ base: "260px", md: "full" }}
-                borderRadius={{ base: "22px", md: "" }}
+                w={{ base: "full", md: "443px" }}
+                h={{ base: "260px", md: "443px" }}
+                borderRadius={{ base: "22px", md: "full" }}
                 overflow="hidden"
                 boxShadow="xl"
                 cursor="pointer"
                 onClick={handleTogglePlay}
               >
-                <video
+                <Image
+                  src="images/sustainability/stories.png"
+                  w="100%"
+                  h="100%"
+                  objectFit="cover"
+                  transition="opacity 0.5s ease-in-out"
+                />
+                {/* <video
                   ref={videoRef}
                   muted
                   loop
@@ -157,10 +167,10 @@ const Stories = () => {
                     objectFit: "cover",
                     transition: "opacity 0.5s ease-in-out",
                   }}
-                  controls
+                  // controls
                 >
                   <source src="/images/landing/dusk.mp4" type="video/mp4" />
-                </video>
+                </video> */}
 
                 {/* Play/Pause button overlay */}
                 <Flex
@@ -182,7 +192,7 @@ const Stories = () => {
               </Box>
 
               {/* Controls */}
-              <HStack
+              {/* <HStack
                 mt={4}
                 gap="25px"
                 position="absolute"
@@ -208,7 +218,7 @@ const Stories = () => {
                 <Box as="button" onClick={() => handleSeek(10)}>
                   <IoPlayForward color="#fff" size={28} />
                 </Box>
-              </HStack>
+              </HStack> */}
 
               {/* Decorative Dots PNG */}
               <Image

@@ -9,6 +9,7 @@ import { GrTechnology } from "react-icons/gr";
 
 
 export const headers = [
+
   {
     id: 2,
     name: "About Us",
@@ -202,7 +203,7 @@ export const teamData = [
       },
       {
         id: 2,
-        name: "Anthony Nwosi",
+        name: "Anthony Nwosu",
         title: "Chief Treasury & Operations Officer",
         img: "/images/about/el_anthony.jpg",
         description: `At Transalliance Group, we enable businesses navigate
@@ -261,7 +262,7 @@ export const teamData = [
         id: 5,
         name: "Olufemi Ojo-Omoniyi",
         title: "Chief Risk & Internal Control Officer",
-        img: "/images/about/team1.png",
+        img: "/images/about/default.png",
         description: `At Transalliance Group, we enable businesses navigate
   the complexities of global trade with seamless currency exchange, 
   liquidity management, and cross-border trade solutions. Our currency 
@@ -280,7 +281,7 @@ export const teamData = [
         id: 6,
         name: "Afam Obodozie",
         title: "Chief Strategy, Research & Business Intelligence Officer",
-        img: "/images/about/el_afam.jpg",
+        img: "/images/about/el_afam1.png",
         description: `At Transalliance Group, we enable businesses navigate
   the complexities of global trade with seamless currency exchange, 
   liquidity management, and cross-border trade solutions. Our currency 
@@ -299,7 +300,7 @@ export const teamData = [
         id: 7,
         name: "Mayowa Igunbor",
         title: "Chief People & Communications Officer",
-        img: "/images/about/team3.png",
+        img: "/images/about/default.png",
         description: `At Transalliance Group, we enable businesses navigate
   the complexities of global trade with seamless currency exchange, 
   liquidity management, and cross-border trade solutions. Our currency 
@@ -318,7 +319,7 @@ export const teamData = [
         id: 8,
         name: "Anselm Fowel",
         title: "Chief Technology &Innovation Officer",
-        img: "/images/about/team4.png",
+        img: "/images/about/default.png",
         description: `At Transalliance Group, we enable businesses navigate
   the complexities of global trade with seamless currency exchange, 
   liquidity management, and cross-border trade solutions. Our currency 
@@ -340,9 +341,9 @@ export const teamData = [
     members: [
       {
         id: 13,
-        name: "Nikolaos Baziotis",
-        title: "Director",
-        img: "/images/about/team1.png",
+        name: "Mayowa Igunbor",
+        title: "Managing Director of Fazo Travels and Hospitality Limited",
+        img: "/images/about/charles.png",
         description: `At Transalliance Group, we enable businesses navigate
   the complexities of global trade with seamless currency exchange, 
   liquidity management, and cross-border trade solutions. Our currency 
@@ -357,49 +358,30 @@ export const teamData = [
   management, Transalliance Capital is your trusted partner in navigating the 
   global financial landscape.`,
       },
-      {
-        id: 14,
-        name: "Nikolaos Baziotis",
-        title: "Director",
-        img: "/images/about/team2.png",
-        description: `At Transalliance Group, we enable businesses navigate
-  the complexities of global trade with seamless currency exchange, 
-  liquidity management, and cross-border trade solutions. Our currency 
-  services are designed to optimize cash flow, mitigate currency risks, 
-  and ensure compliance with international financial regulations. Whether 
-  foreign currency inflows, structured FX transactions, or offshore trade 
-  payments, we provide the expertise and infrastructure to facilitate smooth
-  and secure transactions. For businesses seeking reliable financial solutions,
-  our member company, Transalliance Capital Limited (TransCap), offers 
-  bespoke services to support international trade, investment, and treasury
-  operations. With a focus on efficiency, compliance, and strategic financial 
-  management, Transalliance Capital is your trusted partner in navigating the 
-  global financial landscape.`,
-      },
-      {
-        id: 15,
-        name: "Nikolaos Baziotis",
-        title: "Director",
-        img: "/images/about/team3.png",
-        description: `At Transalliance Group, we enable businesses navigate
-  the complexities of global trade with seamless currency exchange, 
-  liquidity management, and cross-border trade solutions. Our currency 
-  services are designed to optimize cash flow, mitigate currency risks, 
-  and ensure compliance with international financial regulations. Whether 
-  foreign currency inflows, structured FX transactions, or offshore trade 
-  payments, we provide the expertise and infrastructure to facilitate smooth
-  and secure transactions. For businesses seeking reliable financial solutions,
-  our member company, Transalliance Capital Limited (TransCap), offers 
-  bespoke services to support international trade, investment, and treasury
-  operations. With a focus on efficiency, compliance, and strategic financial 
-  management, Transalliance Capital is your trusted partner in navigating the 
-  global financial landscape.`,
-      },
+  //     {
+  //       id: 14,
+  //       name: "Ngozi Udoka-Abazie",
+  //       title: "Managing Director of Transalliance Capital Ltd",
+  //       img: "/images/about/default.png",
+  //       description: `At Transalliance Group, we enable businesses navigate
+  // the complexities of global trade with seamless currency exchange, 
+  // liquidity management, and cross-border trade solutions. Our currency 
+  // services are designed to optimize cash flow, mitigate currency risks, 
+  // and ensure compliance with international financial regulations. Whether 
+  // foreign currency inflows, structured FX transactions, or offshore trade 
+  // payments, we provide the expertise and infrastructure to facilitate smooth
+  // and secure transactions. For businesses seeking reliable financial solutions,
+  // our member company, Transalliance Capital Limited (TransCap), offers 
+  // bespoke services to support international trade, investment, and treasury
+  // operations. With a focus on efficiency, compliance, and strategic financial 
+  // management, Transalliance Capital is your trusted partner in navigating the 
+  // global financial landscape.`,
+  //     },
       {
         id: 16,
-        name: "Nikolaos Baziotis",
-        title: "Director",
-        img: "/images/about/team4.png",
+        name: "Amamife Okafor",
+        title: "Managing Director of Transalliance Capital Ltd",
+        img: "/images/about/default.png",
         description: `At Transalliance Group, we enable businesses navigate
   the complexities of global trade with seamless currency exchange, 
   liquidity management, and cross-border trade solutions. Our currency 
@@ -414,82 +396,82 @@ export const teamData = [
   management, Transalliance Capital is your trusted partner in navigating the 
   global financial landscape.`,
       },
-      {
-        id: 17,
-        name: "Nikolaos Baziotis",
-        title: "Director",
-        img: "/images/about/team1.png",
-        description: `At Transalliance Group, we enable businesses navigate
-  the complexities of global trade with seamless currency exchange, 
-  liquidity management, and cross-border trade solutions. Our currency 
-  services are designed to optimize cash flow, mitigate currency risks, 
-  and ensure compliance with international financial regulations. Whether 
-  foreign currency inflows, structured FX transactions, or offshore trade 
-  payments, we provide the expertise and infrastructure to facilitate smooth
-  and secure transactions. For businesses seeking reliable financial solutions,
-  our member company, Transalliance Capital Limited (TransCap), offers 
-  bespoke services to support international trade, investment, and treasury
-  operations. With a focus on efficiency, compliance, and strategic financial 
-  management, Transalliance Capital is your trusted partner in navigating the 
-  global financial landscape.`,
-      },
-      {
-        id: 18,
-        name: "Nikolaos Baziotis",
-        title: "Director",
-        img: "/images/about/team2.png",
-        description: `At Transalliance Group, we enable businesses navigate
-  the complexities of global trade with seamless currency exchange, 
-  liquidity management, and cross-border trade solutions. Our currency 
-  services are designed to optimize cash flow, mitigate currency risks, 
-  and ensure compliance with international financial regulations. Whether 
-  foreign currency inflows, structured FX transactions, or offshore trade 
-  payments, we provide the expertise and infrastructure to facilitate smooth
-  and secure transactions. For businesses seeking reliable financial solutions,
-  our member company, Transalliance Capital Limited (TransCap), offers 
-  bespoke services to support international trade, investment, and treasury
-  operations. With a focus on efficiency, compliance, and strategic financial 
-  management, Transalliance Capital is your trusted partner in navigating the 
-  global financial landscape.`,
-      },
-      {
-        id: 19,
-        name: "Nikolaos Baziotis",
-        title: "Director",
-        img: "/images/about/team3.png",
-        description: `At Transalliance Group, we enable businesses navigate
-  the complexities of global trade with seamless currency exchange, 
-  liquidity management, and cross-border trade solutions. Our currency 
-  services are designed to optimize cash flow, mitigate currency risks, 
-  and ensure compliance with international financial regulations. Whether 
-  foreign currency inflows, structured FX transactions, or offshore trade 
-  payments, we provide the expertise and infrastructure to facilitate smooth
-  and secure transactions. For businesses seeking reliable financial solutions,
-  our member company, Transalliance Capital Limited (TransCap), offers 
-  bespoke services to support international trade, investment, and treasury
-  operations. With a focus on efficiency, compliance, and strategic financial 
-  management, Transalliance Capital is your trusted partner in navigating the 
-  global financial landscape.`,
-      },
-      {
-        id: 20,
-        name: "Nikolaos Baziotis",
-        title: "Director",
-        img: "/images/about/team4.png",
-        description: `At Transalliance Group, we enable businesses navigate
-  the complexities of global trade with seamless currency exchange, 
-  liquidity management, and cross-border trade solutions. Our currency 
-  services are designed to optimize cash flow, mitigate currency risks, 
-  and ensure compliance with international financial regulations. Whether 
-  foreign currency inflows, structured FX transactions, or offshore trade 
-  payments, we provide the expertise and infrastructure to facilitate smooth
-  and secure transactions. For businesses seeking reliable financial solutions,
-  our member company, Transalliance Capital Limited (TransCap), offers 
-  bespoke services to support international trade, investment, and treasury
-  operations. With a focus on efficiency, compliance, and strategic financial 
-  management, Transalliance Capital is your trusted partner in navigating the 
-  global financial landscape.`,
-      },
+  //     {
+  //       id: 17,
+  //       name: "Nikolaos Baziotis",
+  //       title: "Director",
+  //       img: "/images/about/team1.png",
+  //       description: `At Transalliance Group, we enable businesses navigate
+  // the complexities of global trade with seamless currency exchange, 
+  // liquidity management, and cross-border trade solutions. Our currency 
+  // services are designed to optimize cash flow, mitigate currency risks, 
+  // and ensure compliance with international financial regulations. Whether 
+  // foreign currency inflows, structured FX transactions, or offshore trade 
+  // payments, we provide the expertise and infrastructure to facilitate smooth
+  // and secure transactions. For businesses seeking reliable financial solutions,
+  // our member company, Transalliance Capital Limited (TransCap), offers 
+  // bespoke services to support international trade, investment, and treasury
+  // operations. With a focus on efficiency, compliance, and strategic financial 
+  // management, Transalliance Capital is your trusted partner in navigating the 
+  // global financial landscape.`,
+  //     },
+  //     {
+  //       id: 18,
+  //       name: "Nikolaos Baziotis",
+  //       title: "Director",
+  //       img: "/images/about/team2.png",
+  //       description: `At Transalliance Group, we enable businesses navigate
+  // the complexities of global trade with seamless currency exchange, 
+  // liquidity management, and cross-border trade solutions. Our currency 
+  // services are designed to optimize cash flow, mitigate currency risks, 
+  // and ensure compliance with international financial regulations. Whether 
+  // foreign currency inflows, structured FX transactions, or offshore trade 
+  // payments, we provide the expertise and infrastructure to facilitate smooth
+  // and secure transactions. For businesses seeking reliable financial solutions,
+  // our member company, Transalliance Capital Limited (TransCap), offers 
+  // bespoke services to support international trade, investment, and treasury
+  // operations. With a focus on efficiency, compliance, and strategic financial 
+  // management, Transalliance Capital is your trusted partner in navigating the 
+  // global financial landscape.`,
+  //     },
+  //     {
+  //       id: 19,
+  //       name: "Nikolaos Baziotis",
+  //       title: "Director",
+  //       img: "/images/about/team3.png",
+  //       description: `At Transalliance Group, we enable businesses navigate
+  // the complexities of global trade with seamless currency exchange, 
+  // liquidity management, and cross-border trade solutions. Our currency 
+  // services are designed to optimize cash flow, mitigate currency risks, 
+  // and ensure compliance with international financial regulations. Whether 
+  // foreign currency inflows, structured FX transactions, or offshore trade 
+  // payments, we provide the expertise and infrastructure to facilitate smooth
+  // and secure transactions. For businesses seeking reliable financial solutions,
+  // our member company, Transalliance Capital Limited (TransCap), offers 
+  // bespoke services to support international trade, investment, and treasury
+  // operations. With a focus on efficiency, compliance, and strategic financial 
+  // management, Transalliance Capital is your trusted partner in navigating the 
+  // global financial landscape.`,
+  //     },
+  //     {
+  //       id: 20,
+  //       name: "Nikolaos Baziotis",
+  //       title: "Director",
+  //       img: "/images/about/team4.png",
+  //       description: `At Transalliance Group, we enable businesses navigate
+  // the complexities of global trade with seamless currency exchange, 
+  // liquidity management, and cross-border trade solutions. Our currency 
+  // services are designed to optimize cash flow, mitigate currency risks, 
+  // and ensure compliance with international financial regulations. Whether 
+  // foreign currency inflows, structured FX transactions, or offshore trade 
+  // payments, we provide the expertise and infrastructure to facilitate smooth
+  // and secure transactions. For businesses seeking reliable financial solutions,
+  // our member company, Transalliance Capital Limited (TransCap), offers 
+  // bespoke services to support international trade, investment, and treasury
+  // operations. With a focus on efficiency, compliance, and strategic financial 
+  // management, Transalliance Capital is your trusted partner in navigating the 
+  // global financial landscape.`,
+  //     },
     ],
   },
 

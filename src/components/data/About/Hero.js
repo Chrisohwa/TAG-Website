@@ -62,7 +62,8 @@ const Hero = () => {
       <Container
         maxW="1350px"
         px={{ base: "10px", md: "15px", xl: "0px" }}
-        h={{ base: "40vh", lg: "60vh" }}
+        mt={{ base: "100px", md: "", xl: "" }}
+        minH={{ base: "40vh", lg: "60vh" }}
       >
         <Flex
           zIndex={1}
@@ -79,8 +80,8 @@ const Hero = () => {
             <Heading
               color="#E6EDF4"
               fontWeight="bold"
-              fontSize={{ base: "4xl", xl: "6xl" }}
-              mb={{ base: "", md: "", xl: "57px" }}
+              fontSize={{ base: "32px", xl: "6xl" }}
+              mb={{ base: "20px", md: "", xl: "57px" }}
             >
               Who we are
             </Heading>
@@ -95,7 +96,7 @@ const Hero = () => {
               color="#E6EDF4"
               fontWeight="500"
               lineHeight="32px"
-              fontSize={{ base: "20px", xl: "24px" }}
+              fontSize={{ base: "18px", md:"20px", xl: "24px" }}
               letterSpacing="4%"
               maxW="1200px"
             >

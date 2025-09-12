@@ -125,7 +125,7 @@ const Header = () => {
                 cursor="pointer"
                 src="/images/statics/logo.png"
                 w={{ base: "full", md: "240px" }}
-                h="40px"
+                h="30px"
               />
             </Box>
           </motion.div>

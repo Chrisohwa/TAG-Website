@@ -11,7 +11,7 @@ const Hero = () => {
       color="#fff"
       pos="relative"
       className="full_width"
-      px="20px"
+      // px="20px"
     >
       <Image
         w="100%"

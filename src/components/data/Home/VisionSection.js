@@ -9,8 +9,10 @@ import {
   Image,
 } from "@chakra-ui/react";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const VisionSection = () => {
+  const navigate = useNavigate();
   const [isMobile] = useMediaQuery("(max-width: 768px)");
   return (
     <Box
@@ -37,8 +39,8 @@ const VisionSection = () => {
           h="140vh"
           position={{ base: "", md: "relative" }}
           objectFit="contain"
-          top={{ md: "-120px", xl: "-290px" }}
-          right={{ md: "-240px", xl: "-280px" }}
+          top={{ md: "-120px", xl: "-260px" }}
+          right={{ md: "-240px", xl: "-270px" }}
         />
       </Flex>
       <Container
@@ -62,24 +64,24 @@ const VisionSection = () => {
 
         <Flex
           direction="column"
-          align={{ base: "center", md: "flex-start", xl: "flex-start" }}
-          justify={{ base: "center", md: "flex-start", xl: "flex-start" }}
+          align={{ base: "flex-start", md: "flex-start", xl: "flex-start" }}
+          justify={{ base: "flex-start", md: "flex-start", xl: "flex-start" }}
           bgColor="#003B73BF"
           maxW={{ base: "100%", md: "600px", xl: "860px" }}
-          p={{ base: "20px 40px", md: "25px 66px", xl: "40px 76px" }}
+          p={{ base: "40px 15px", md: "25px 66px", xl: "40px 76px" }}
           gap="20px"
           borderRadius={{ base: "5px", md: "23px", xl: "23px" }}
           w={{ base: "full", md: "full", xl: "" }}
           mt={{ base: "-5px", md: "40px", xl: "0px" }}
           backdropFilter="blur(10px)"
         >
-          <Text
+          {/* <Text
             fontSize={{ base: "14px", md: "15px", xl: "20px" }}
             fontWeight={600}
             color="#d4a861"
           >
             What drives us{" "}
-          </Text>
+          </Text> */}
           <Heading
             fontWeight={700}
             fontSize={{ base: "28px", md: "32px", xl: "40px" }}
@@ -100,7 +102,7 @@ const VisionSection = () => {
             fontWeight={500}
             color="#E6EDF4"
             maxW={{ base: "100%", md: "450px", xl: "745px" }}
-            textAlign={{ base: "center", md: "justify", xl: "left" }}
+            textAlign={{ base: "left", md: "justify", xl: "left" }}
             lineHeight={{ base: "", md: "", xl: "34px" }}
           >
             Our mission is simple yet profound: to consistently deliver superior
@@ -120,6 +122,7 @@ const VisionSection = () => {
             fontWeight={600}
             px="12px"
             py="8px"
+            onClick={() => navigate("/about-us")}
           >
             Learn More About Us
           </Button>

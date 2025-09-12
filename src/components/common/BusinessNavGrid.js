@@ -171,7 +171,8 @@ const BusinessNavGrid = ({onNavigate}) => {
       placeItems="center"
       gap="20px"
       px="20px"
-      py="30px"
+      py="40px"
+      mx="auto"
     >
       <GridItem gridColumn="1" gridRow="1">
         <NavCard
@@ -202,10 +203,10 @@ const BusinessNavGrid = ({onNavigate}) => {
           name={headers[1]?.sub[3]?.name}
           icon={headers[1]?.sub[3]?.icon}
           details={headers[1]?.sub[3]?.details}
-          oonClick={() => onNavigate(headers[1], headers[1]?.sub[3])}
+          onClick={() => onNavigate(headers[1], headers[1]?.sub[3])}
         />
       </GridItem>
-      <GridItem gridColumn="3" gridRow="1/ span 2">
+      <GridItem gridColumn="3" gridRow="1/ span 2" ml="-25px">
         <NavCard imageVariant />
       </GridItem>
     </Grid>

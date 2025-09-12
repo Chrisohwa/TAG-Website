@@ -76,6 +76,7 @@ const OurTeam = () => {
                     xl: "34px",
                   }}
                   bottom="15px"
+                  textAlign={idx % 2 === 0 ? "left" : "right"}
                 >
                   {team.group}
                 </Heading>
@@ -84,8 +85,9 @@ const OurTeam = () => {
 
             {/* Members Grid */}
             <SimpleGrid
-              columns={{ base: "2", md: "2", lg: "3", xl: "4" }}
-              gap="20px"
+              columns={{ base: "2", md: "2", lg: "2", xl: "2" }}
+              gapX="20px"
+              gapY="50px"
             >
               {team.members.map((member, index) => (
                 <motion.div
@@ -110,6 +112,7 @@ const OurTeam = () => {
                     onClick={() =>
                       navigate(`/about-us/member-details/${member.id}`)
                     }
+                    newColor={idx % 2 === 0 ? "#001A32" : "#fff"}
                   />
                 </motion.div>
               ))}

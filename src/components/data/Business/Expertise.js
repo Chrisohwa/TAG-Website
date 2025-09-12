@@ -14,11 +14,12 @@ import React from "react";
 import { motion } from "framer-motion";
 import { GoArrowUpRight } from "react-icons/go";
 import { Link } from "react-router-dom";
-import { BiChevronsRight } from "react-icons/bi";
+import { useNavigate } from "react-router-dom";
 
 const MotionFlex = motion(Flex);
 
 const Expertise = () => {
+   const navigate = useNavigate();
   return (
     <Box
       className="full_width"
@@ -39,8 +40,8 @@ const Expertise = () => {
           color="#151D26"
           fontWeight="400"
           fontSize={{ base: "2xl", md: "3xl", xl: "74px" }}
-          lineHeight="89px"
-          textAlign={{ base: "center", md: "left" }}
+          lineHeight={{ base: "70px", md: "89px" }}
+          textAlign={{ base: "left", md: "left" }}
         >
           Our Expertise
         </Heading>
@@ -50,7 +51,7 @@ const Expertise = () => {
           maxW="full"
           fontSize="18px"
           fontWeight={400}
-          textAlign={{ base: "center", md: "left" }}
+          textAlign={{ base: "left", md: "left" }}
         >
           We specialize in delivering tailored solutions to address your
           business needs across these key areas:
@@ -62,7 +63,7 @@ const Expertise = () => {
           gap="62px"
         >
           {/* Currency */}
-          <GridItem>
+          <GridItem id="currency">
             <MotionFlex
               flexDir="column"
               color="#001A32"
@@ -74,7 +75,6 @@ const Expertise = () => {
               initial={{ opacity: 0 }}
               whileInView={{ x: [-60, 0], opacity: 1 }}
               transition={{ duration: 1.1 }}
-              id="currency"
             >
               <Image
                 src="/images/services/currencyimage.jpg"
@@ -112,7 +112,7 @@ const Expertise = () => {
           </GridItem>
 
           {/* Mining */}
-          <GridItem placeItems="flex-end">
+          <GridItem placeItems="flex-end" id="MineralsProduction">
             <MotionFlex
               flexDir="column"
               color="#001A32"
@@ -124,7 +124,6 @@ const Expertise = () => {
               initial={{ opacity: 0 }}
               whileInView={{ x: [60, 0], opacity: 1 }}
               transition={{ duration: 1.1 }}
-              id="MineralsProduction"
             >
               <Image
                 src="/images/services/miningimage.jpg"
@@ -162,7 +161,7 @@ const Expertise = () => {
           </GridItem>
 
           {/* Travel */}
-          <GridItem>
+          <GridItem id="hospitality">
             <MotionFlex
               flexDir="column"
               color="#001A32"
@@ -174,7 +173,6 @@ const Expertise = () => {
               initial={{ opacity: 0 }}
               whileInView={{ x: [-60, 0], opacity: 1 }}
               transition={{ duration: 1.1 }}
-              id="hospitality"
             >
               <Image
                 src="/images/services/hospitalityimage.jpg"
@@ -212,7 +210,7 @@ const Expertise = () => {
           </GridItem>
 
           {/* FinTech */}
-          <GridItem placeItems="flex-end">
+          <GridItem placeItems="flex-end" id="financial-technology">
             <MotionFlex
               flexDir="column"
               color="#001A32"
@@ -224,7 +222,6 @@ const Expertise = () => {
               initial={{ opacity: 0 }}
               whileInView={{ x: [60, 0], opacity: 1 }}
               transition={{ duration: 1.1 }}
-              id="financial-technology"
             >
               <Image
                 src="/images/services/Financeimage.jpg"
@@ -273,6 +270,7 @@ const Expertise = () => {
               px="30px"
               py="24px"
               borderRadius="md"
+              onClick={() => navigate("/contact-us/#send-us-a-message")}
             >
               <Flex align="center" gap="10px">
                 <Text fontSize="16px" fontWeight="semibold">

@@ -10,10 +10,12 @@ import {
   Image,
 } from "@chakra-ui/react";
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 const Hero = () => {
   const [isMobile] = useMediaQuery("(max-width: 768px)");
   const [loaded, setLoaded] = useState(false);
+  const navigate = useNavigate();
   return (
     <Flex
       position="relative"
@@ -134,6 +136,7 @@ const Hero = () => {
                 w={{ base: "170px", md: "205px" }}
                 h="54px"
                 fontSize="16px"
+                onClick={() => navigate("/contact-us/#send-us-a-message")}
               >
                 Send Us a Message
               </Button>
@@ -152,8 +155,9 @@ const Hero = () => {
                 mt="10px"
                 mb="30px"
                 w={{ base: "170px", md: "205px" }}
-                h={{ base: "50px", md: "54px" }}     
+                h={{ base: "50px", md: "54px" }}
                 fontSize="16px"
+                onClick={() => navigate("/contact-us/#find-us")}
               >
                 Find Our Office
               </Button>

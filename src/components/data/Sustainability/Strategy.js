@@ -150,7 +150,6 @@ const Strategy = () => {
       bgSize="cover"
       bgPos="center"
       px="20px"
-      id="strategies"
     >
       <Box
         position="absolute"
@@ -167,7 +166,11 @@ const Strategy = () => {
         maxW="1350px"
         px={{ base: "10px", md: "15px", xl: "0px" }}
       >
-        <Flex justify="center" mt={{ base: "80px", md: "130px", xl: "130px" }}>
+        <Flex
+          justify="center"
+          mt={{ base: "80px", md: "130px", xl: "130px" }}
+          id="strategies"
+        >
           <Heading
             fontSize={{ base: "32px", md: "40px", xl: "60px" }}
             fontWeight={700}

@@ -1,13 +1,16 @@
 import { Box, Flex, Button, Heading, Text, VStack, Container } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+
 
 const Opportunity = () => {
+  const navigate = useNavigate();
   return (
     <Flex
       position="relative"
       className="full_width"
-      h={{ base: "60vh", md: "60vh", xl:"100vh" }}
-      bgImage="url('/images/landing/opportunity.png')"
+      h={{ base: "60vh", md: "60vh", xl: "100vh" }}
+      bgImage="url('/images/landing/opportunity.jpg')"
       bgSize={{ base: "cover", md: "cover" }}
       bgPos={{ base: "top center", md: "center" }}
       bgRepeat="no-repeat"
@@ -25,7 +28,7 @@ const Opportunity = () => {
       <Container>
         <Flex
           w="full"
-          justify={{ base: "center", md: "center", xl: "flex-end" }}
+          justify={{ base: "flex-start", md: "center", xl: "flex-end" }}
         >
           <motion.div
             initial={{ opacity: 0 }}
@@ -34,12 +37,12 @@ const Opportunity = () => {
           >
             <Flex
               flexDir="column"
-              align={{ base: "center", md: "center", xl: "flex-start" }}
-              justifyContent={{ base: "center", md: "", xl: "flex-end" }}
-              gapY="25px"
+              align={{ base: "flex-start", md: "center", xl: "flex-start" }}
+              justifyContent={{ base: "flex-start", md: "", xl: "flex-end" }}
+              gapY={{ base: "20px", md: "25px", xl: "25px" }}
               color="white"
               maxW="700px"
-              px={{ base: 6, md: 50 }}
+              px={{ base: "0px", md: 50, xl: 50 }}
               position="relative"
               zIndex={1}
             >
@@ -48,7 +51,7 @@ const Opportunity = () => {
                 textTransform="uppercase"
                 fontSize="20px"
                 color="#FFB800"
-                lineHeight="54px"
+                lineHeight={{ base: "100%", md: "", xl: "54px" }}
               >
                 What We Do
               </Heading>
@@ -64,7 +67,7 @@ const Opportunity = () => {
               <Text
                 fontSize={{ base: "16px", md: "24px" }}
                 color="#fff"
-                textAlign={{ base: "center", md: "center", xl: "left" }}
+                textAlign={{ base: "left", md: "center", xl: "left" }}
                 fontWeight={500}
               >
                 Be part of a dynamic group shaping the future of businesses in
@@ -82,6 +85,7 @@ const Opportunity = () => {
                 borderRadius="12px"
                 w="287px"
                 h="76px"
+                onClick={() => navigate("/careers")}
               >
                 View Current Opportunities
               </Button>

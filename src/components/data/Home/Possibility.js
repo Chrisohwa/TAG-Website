@@ -19,9 +19,9 @@ const Possibility = () => {
       <Container maxW="1350px" px="0px">
         <Flex
           flexDir="column"
-          gap="28px"
-          textAlign="Center"
-          px={{ base: "", md: "", xl: "40px" }}
+          gap={{base:"10px", md:"28px", xl:"28px"}}
+          textAlign={{base:"left", md:"center", xl:"center"}}
+          px={{ base: "15px", md: "", xl: "40px" }}
         >
           <Heading
             color="#00472D"
@@ -33,7 +33,7 @@ const Possibility = () => {
           <Heading
             color="#001A32"
             fontWeight={600}
-            fontSize={{ base: "24px", md: "28px", xl: "36px" }}
+            fontSize={{ base: "22px", md: "28px", xl: "36px" }}
           >
             Industries That Power Possibilities
           </Heading>
