@@ -51,7 +51,7 @@ const OurPhilosophy = () => {
                 objectFit="cover"
                 w={{ base: "100%", md: "200px", lg: "210px", xl: "525px" }}
                 h="395px"
-                loading="lazy"
+                
               />
             </motion.div>
 
@@ -78,7 +78,7 @@ const OurPhilosophy = () => {
                   w={{ base: "100%", md: "100%" }}
                   h={{ base: "250px", md: "380px" }}
                   zIndex={1}
-                  loading="lazy"
+                  
                 />
               </Flex>
             </motion.div>
@@ -96,7 +96,7 @@ const OurPhilosophy = () => {
                 objectFit="cover"
                 w={{ base: "100%", md: "200px", lg: "210px", xl: "525px" }}
                 h="395px"
-                loading="lazy"
+                
               />
             </motion.div>
           </Flex>
