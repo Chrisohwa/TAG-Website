@@ -14,14 +14,36 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Formik, Form } from "formik";
 import { messSchema, messValue } from "../../../utils/validation";
+import { useSendQuickMessage } from "../../../services/query";
+import {toaster} from "../../ui/toaster";
 
 const Contact = () => {
   const [isChecked, setIsChecked] = useState(false);
 
-  const handleSubmit = (values, { resetForm }) => {
+  const { mutate, isLoading } = useSendQuickMessage({
+    onSuccess: (res) => {
+      // successToast(res?.message);
+      toaster.success({
+              title: "Successful",
+              description: res?.message,
+            });
+      resetForm();
+    },
+    onError: (err) => {
+      toaster.error({
+              title: err?.message,
+              description: err?.response?.data?.message,
+            });
+      // errorToast(
+      //   err?.response?.data?.message || err?.message || "An Error occurred"
+      // );
+    },
+  });
+  const handleSubmit = (values) => {
     console.log("Form submitted", values);
-    resetForm();
+    mutate(values);
   };
+
   return (
     <Box
       className="full_width"
@@ -263,7 +285,7 @@ const Contact = () => {
                     fontWeight="600"
                     _hover={{ bg: "#002244" }}
                     mt="15px"
-                    isLoading={isSubmitting}
+                    isLoading={isSubmitting || isLoading}
                     loadingText="Sending..."
                     disabled={!isValid || !dirty}
                   >

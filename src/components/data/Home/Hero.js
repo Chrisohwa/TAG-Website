@@ -57,7 +57,10 @@ const Hero = () => {
         }}
         onCanPlay={() => setLoaded(true)}
       >
-        <source src="/images/landing/dusk.mp4" type="video/mp4" />
+        {/* <source src="/images/landing/dusk.mp4" type="video/mp4" /> */}
+        <source
+          src="https://ik.imagekit.io/oilm06bg9/dusk.mp4/ik-video.mp4?updatedAt=1757751757476"
+        />
       </video>
 
       {/* dark background overlay */}
@@ -97,7 +100,7 @@ const Hero = () => {
               fontSize={{ base: "2xl", md: "4xl", lg: "63px" }}
               fontWeight={700}
               maxW={{ base: "90%", md: "500px", lg: "845px" }}
-              lineHeight={{ base: "30px", md: "50px", xl:"84px" }}
+              lineHeight={{ base: "30px", md: "50px", xl: "84px" }}
               textAlign={{ base: "left", md: "left", lg: "left" }}
             >
               Engineering Business Innovations for the Future

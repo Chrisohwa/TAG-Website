@@ -21,16 +21,17 @@ const ContactCard = ({ icon, title, contactLink, details }) => {
 
   return (
     <Flex
-      w={{ base: "full", md: "284px" }}
+      w={{ base: "370px", md: "284px" }}
       h="248px"
       bg="#fff"
       borderRadius="12px"
-      boxShadow="0px 8px 32px rgba(15, 23, 42, 0.08)"
+      boxShadow="lg"
       p="24px"
       flexDir="column"
       alignItems="center"
       justify="flex-start"
       textAlign="center"
+      
     >
       <Center w="64px" h="64px" borderRadius="full" bg="#2563EB" mb="14px">
         <Icon as={icon} boxSize="22px" color="white" />
@@ -60,7 +61,7 @@ const ContactCard = ({ icon, title, contactLink, details }) => {
             {contactLink.replace(/^(tel:|mailto:)/, "")}
           </Link>
         ) : (
-          <Text color="#2F64FF" fontSize="16px" fontWeight={600}>
+          <Text color="#2F64FF" fontSize="16px" fontWeight={600} maxW="350px">
             {contactLink}
           </Text>
         )}

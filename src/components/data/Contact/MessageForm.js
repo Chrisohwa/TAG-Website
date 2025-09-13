@@ -13,11 +13,33 @@ import React from "react";
 import Fields from "../../common/Fields";
 import { Formik, Form } from "formik";
 import { messageSchema, messageValue1 } from "../../../utils/validation";
+import { useSendBookingMessage } from "../../../services/query";
+import {toaster} from "../../ui/toaster";
 
 const MessageForm = () => {
-  const handleSubmit = (values, { resetForm }) => {
+  const { mutate, isLoading } = useSendBookingMessage({
+    onSuccess: (res) => {
+      toaster.success({
+        title: "Successful",
+        description: res?.message,
+      });
+        resetForm();
+      },
+      // successToast(res?.message);
+      
+    onError: (err) => {
+      toaster.error({
+        title: err?.message,
+        description: err?.response?.data?.message,
+      });
+      // errorToast(
+      //   err?.response?.data?.message || err?.message || "An Error occurred"
+      // );
+    },
+  });
+  const handleSubmit = (values) => {
     console.log("Form submitted", values);
-    resetForm();
+    mutate(values);
   };
 
   return (
@@ -144,7 +166,7 @@ const MessageForm = () => {
                     <GridItem>
                       <Fields
                         title="Phone Number"
-                        placeholder="+1 (555) 123-4567"
+                        placeholder="234(91)391-44-551"
                         inputFeild
                         type="tel"
                         name="phoneNumber"
@@ -199,9 +221,8 @@ const MessageForm = () => {
                       py={6}
                       borderRadius="8px"
                       _hover={{ bg: "#1d4ed8" }}
-                      isLoading={isSubmitting}
-                      loadingText="Sending..."
-                      disabled={!isValid || !dirty}
+                      isLoading={isSubmitting || isLoading}
+                      // disabled={!isValid || !dirty}
                     >
                       Send Message
                     </Button>

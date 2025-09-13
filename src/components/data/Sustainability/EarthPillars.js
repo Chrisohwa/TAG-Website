@@ -180,7 +180,8 @@ const EarthPillars = () => {
               transition={{ duration: 1.1 }}
             >
               <Image
-                src="/images/sustainability/greenland.jpg"
+                src="https://ik.imagekit.io/oilm06bg9/greenland.jpg?updatedAt=1757757917811"
+                // src="/images/sustainability/greenland.jpg"
                 alt="greenland"
                 borderRadius="22px"
                 objectFit="cover"
@@ -200,7 +201,8 @@ const EarthPillars = () => {
                 w={{ base: "370px", md: "full", xl: "628px" }}
               >
                 <Image
-                  src="/images/sustainability/map.jpg"
+                  src="https://ik.imagekit.io/oilm06bg9/map.jpg?updatedAt=1757757922211"
+                  // src="/images/sustainability/map.jpg"
                   alt="map"
                   borderRadius="22px"
                   objectFit="cover"
@@ -228,7 +230,8 @@ const EarthPillars = () => {
                 borderTopRightRadius="22px"
               >
                 <Image
-                  src="/images/sustainability/stats.png"
+                  src="https://ik.imagekit.io/oilm06bg9/stats.png?updatedAt=1757757915516"
+                  // src="/images/sustainability/stats.png"
                   alt="stats"
                   objectFit="cover"
                   w={{ base: "370px", md: "95%", xl: "290px" }}

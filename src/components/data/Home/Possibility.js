@@ -16,11 +16,11 @@ const Possibility = () => {
       minH={{ base: "", md: "80vh", xl: "80vh" }}
       pt={{ base: "30px", md: "", xl: "0px" }}
     >
-      <Container maxW="1350px" px="0px">
+      <Container maxW="1350px" px={{ base: "10px", md: "", xl: "" }}>
         <Flex
           flexDir="column"
-          gap={{base:"10px", md:"28px", xl:"28px"}}
-          textAlign={{base:"left", md:"center", xl:"center"}}
+          gap={{ base: "10px", md: "28px", xl: "28px" }}
+          textAlign={{ base: "left", md: "center", xl: "center" }}
           px={{ base: "15px", md: "", xl: "40px" }}
         >
           <Heading

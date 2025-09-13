@@ -45,7 +45,8 @@ const Hero = () => {
         }}
         onCanPlay={() => setLoaded(true)}
       >
-        <source src="/images/about/aboutHreo.mp4" type="video/mp4" />
+        {/* <source src="/images/about/aboutHreo.mp4" type="video/mp4" /> */}
+        <source src="https://ik.imagekit.io/oilm06bg9/aboutHreo.mp4?updatedAt=1757751943919" />
       </video>
       {/* dark background overlay */}
       <Box
@@ -96,7 +97,7 @@ const Hero = () => {
               color="#E6EDF4"
               fontWeight="500"
               lineHeight="32px"
-              fontSize={{ base: "18px", md:"20px", xl: "24px" }}
+              fontSize={{ base: "18px", md: "20px", xl: "24px" }}
               letterSpacing="4%"
               maxW="1200px"
             >

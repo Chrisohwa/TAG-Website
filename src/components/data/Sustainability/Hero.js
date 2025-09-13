@@ -43,9 +43,13 @@ const Hero = () => {
         }}
         onCanPlay={() => setLoaded(true)}
       >
-        <source
+        {/* <source
           src="/images/sustainability/sustainabilityhero.mp4"
           type="video/mp4"
+        /> */}
+        <source
+          src="https://ik.imagekit.io/oilm06bg9/sustainabilityHero.mp4?updatedAt=1757752026594"
+          
         />
       </video>
       {/* dark background overlay */}

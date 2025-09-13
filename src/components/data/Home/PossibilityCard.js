@@ -9,7 +9,7 @@ const PossibilityCard = ({ image, title, description, link }) => {
       borderRadius="md"
       overflow="hidden"
       height={{ base: "300px", md: "250px", xl: "292px" }}
-      width={{ base: "400px", md: "320px", xl: "300px" }}
+      width={{ base: "full", md: "320px", xl: "300px" }}
       backgroundImage={`url(${image})`}
       backgroundSize="cover"
       backgroundPosition="center"
