@@ -59,8 +59,9 @@ const Expertise = () => {
 
         <Grid
           templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }}
-          maxW="1216px"
+          maxW="1350px"
           gap="62px"
+          placeItems="center"
         >
           {/* Currency */}
           <GridItem id="currency">
@@ -77,7 +78,7 @@ const Expertise = () => {
               transition={{ duration: 1.1 }}
             >
               <Image
-                src="/images/services/currencyimageopt.jpg"
+                src="/images/services/currencyimageopt.JPG"
                 alt="Currency Service"
                 w="100%"
                 objectFit="contain"
@@ -126,7 +127,7 @@ const Expertise = () => {
               transition={{ duration: 1.1 }}
             >
               <Image
-                src="/images/services/miningimageopt.jpg"
+                src="/images/services/miningimageopt.JPG"
                 alt="Mining"
                 w="100%"
                 objectFit="contain"
@@ -175,7 +176,7 @@ const Expertise = () => {
               transition={{ duration: 1.1 }}
             >
               <Image
-                src="/images/services/hospitalityimageopt.jpg"
+                src="/images/services/hospitalityimageopt.JPG"
                 alt="Travel & Hospitality"
                 w="100%"
                 objectFit="contain"
@@ -224,7 +225,7 @@ const Expertise = () => {
               transition={{ duration: 1.1 }}
             >
               <Image
-                src="/images/services/Financeimageopt.jpg"
+                src="/images/services/Financeimageopt.JPG"
                 alt="FinTech"
                 w="100%"
                 objectFit="contain"

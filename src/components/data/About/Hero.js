@@ -46,7 +46,7 @@ const Hero = () => {
         onCanPlay={() => setLoaded(true)}
       >
         {/* <source src="/images/about/aboutHreo.mp4" type="video/mp4" /> */}
-        <source src="https://ik.imagekit.io/oilm06bg9/aboutHreo.mp4?updatedAt=1757751943919" />
+        <source src="https://ik.imagekit.io/ocarsly/Background%20Videos/aboutHreo.mp4?updatedAt=1758056064753" />
       </video>
       {/* dark background overlay */}
       <Box
@@ -65,7 +65,7 @@ const Hero = () => {
         px={{ base: "10px", md: "15px", xl: "0px" }}
         mt={{ base: "100px", md: "", xl: "" }}
         pt={{ base: "", md: "200px", xl: "200px" }}
-        minH={{ base: "40vh", md: "60vh", xl:"100vh" }}
+        minH={{ base: "40vh", md: "60vh", xl: "100vh" }}
       >
         <Flex
           zIndex={1}

@@ -44,8 +44,8 @@ const OurPhilosophy = () => {
               transition={{ duration: 1.1 }}
             >
               <Image
-                // src="/images/about/aboutimg2.png"
-                src="https://ik.imagekit.io/oilm06bg9/aboutimg2.png?updatedAt=1757755974109"
+                src="/images/about/aboutimg2opt.jpg"
+                // src="https://ik.imagekit.io/oilm06bg9/aboutimg2.png?updatedAt=1757755974109"
                 alt="Happy meeting"
                 borderRadius="md"
                 objectFit="cover"
@@ -71,8 +71,8 @@ const OurPhilosophy = () => {
                 zIndex={0}
               >
                 <Image
-                  // src="/images/about/aboutimg3.png"
-                  src="https://ik.imagekit.io/oilm06bg9/aboutimg3.png?updatedAt=1757755973718"
+                  src="/images/about/aboutimg3opt.jpg"
+                  // src="https://ik.imagekit.io/oilm06bg9/aboutimg3.png?updatedAt=1757755973718"
                   alt="Mission Vision Value"
                   objectFit="contain"
                   w={{ base: "100%", md: "100%" }}
@@ -89,8 +89,8 @@ const OurPhilosophy = () => {
               transition={{ duration: 1.1 }}
             >
               <Image
-                src="https://ik.imagekit.io/oilm06bg9/aboutimg1.png?updatedAt=1757755975076"
-                // src="/images/about/aboutimg1.png"
+                // src="https://ik.imagekit.io/oilm06bg9/aboutimg1.png?updatedAt=1757755975076"
+                src="/images/about/aboutimg1opt.jpg"
                 alt="Team clapping"
                 borderRadius="md"
                 objectFit="cover"

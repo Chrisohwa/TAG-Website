@@ -16,7 +16,7 @@ const Hero = () => {
       <Image
         w="100%"
         h="full"
-        src="/images/services/serviceheroopt.jpg"
+        src="/images/services/serviceheroopt.JPG"
         pos="absolute"
         right="0"
         zIndex={0}

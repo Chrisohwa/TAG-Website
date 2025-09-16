@@ -32,7 +32,7 @@ const MemberDetails = () => {
         <Box>
           <Flex
             direction={{ base: "column", md: "row" }}
-            gap={{ base: 6, md: 12, xl:"45px" }}
+            gap={{ base: 6, md: 12, xl: "45px" }}
             align={{ base: "center", md: "flex-start" }}
           >
             {/* Profile Image */}
@@ -52,8 +52,8 @@ const MemberDetails = () => {
                 justify="flex-end"
                 align="flex-end"
                 spacing={3}
-                w={{ base: "100%", md: "300px", xl:"601px" }}
-                h={{ base: "auto", md: "584px", xl:"584px" }}
+                w={{ base: "100%", md: "300px", xl: "601px" }}
+                h={{ base: "auto", md: "584px", xl: "584px" }}
               >
                 <Box color="#001A32" w="100%" mb="30px">
                   <Heading
@@ -77,13 +77,12 @@ const MemberDetails = () => {
           <VStack spacing={4} align="flex-start" mt={10}>
             <Text
               textAlign="justify"
-              fontSize="24px"
+              fontSize="22px"
               fontWeight={500}
               lineHeight="120%"
               color="#001A32"
-            >
-              {member?.description}
-            </Text>
+              dangerouslySetInnerHTML={{ __html: member?.description }}
+            />
           </VStack>
         </Box>
       </Container>

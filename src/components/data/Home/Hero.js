@@ -59,7 +59,7 @@ const Hero = () => {
         onCanPlay={() => setLoaded(true)}
       >
         {/* <source src="/images/landing/dusk.mp4" type="video/mp4" /> */}
-        <source src="https://ik.imagekit.io/oilm06bg9/dusk.mp4/ik-video.mp4?updatedAt=1757751757476" />
+        <source src="https://ik.imagekit.io/ocarsly/Background%20Videos/dusk%20(1).mp4?updatedAt=1758056069093" />
       </video>
 
       {/* dark background overlay */}
@@ -143,20 +143,26 @@ const Hero = () => {
                   onMouseLeave={() => setHoveredIndex(null)}
                 >
                   <Link color="#fff" textDecoration="none" href={link.href}>
-                    <Text
+                    <Flex
                       transition="0.3s ease-in-out"
                       _hover={{
                         transform: "scale(1.05)",
                         textDecoration: "underline",
                       }}
+                      align="center"
+                      justify="center"
+                      gap="3px"
                     >
-                      {link.label}
-                    </Text>
+                      <Text>{link.label}</Text>
+                      <Box mt="10px">
+                        <IoIosArrowRoundForward size={20} color="#fff" />
+                      </Box>
+                    </Flex>
                   </Link>
 
-                  <Box mt="10px" transition="0.3s">
+                  {/* <Box mt="10px" transition="0.3s">
                     <IoIosArrowRoundForward size={20} color="#fff" />
-                  </Box>
+                  </Box> */}
 
                   {/* {hoveredIndex === index && (
                     <Box mt="10px" transition="0.3s">

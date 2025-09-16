@@ -126,7 +126,7 @@ const handleTogglePlay = () => {
               >
                 {play ? (
                   <iframe
-                    src="https://www.youtube.com/embed/tVBZq2fq-WA?autoplay=1&mute=0"
+                    src="https://www.youtube.com/embed/a8bUrpMYn7c"
                     width="100%"
                     height="100%"
                     frameBorder="0"
@@ -137,7 +137,7 @@ const handleTogglePlay = () => {
                   />
                 ) : (
                   <Image
-                    src="images/sustainability/storiesopt.jpg"
+                    src="images/sustainability/storiesopt.JPG"
                     w="100%"
                     h="100%"
                     objectFit="cover"

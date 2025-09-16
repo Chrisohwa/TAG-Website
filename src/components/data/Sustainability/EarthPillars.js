@@ -181,7 +181,7 @@ const EarthPillars = () => {
             >
               <Image
                 // src="https://ik.imagekit.io/oilm06bg9/greenland.jpg?updatedAt=1757757917811"
-                src="/images/sustainability/greenlandopt.jpg"
+                src="/images/sustainability/greenlandopt.JPG"
                 alt="greenland"
                 borderRadius="22px"
                 objectFit="cover"
@@ -202,7 +202,7 @@ const EarthPillars = () => {
               >
                 <Image
                   // src="https://ik.imagekit.io/oilm06bg9/map.jpg?updatedAt=1757757922211"
-                  src="/images/sustainability/mapopt.jpg"
+                  src="/images/sustainability/mapopt.JPG"
                   alt="map"
                   borderRadius="22px"
                   objectFit="cover"

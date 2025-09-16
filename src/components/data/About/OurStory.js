@@ -41,9 +41,9 @@ const OurStory = () => {
       year: "2020",
       side: "left",
       title: "Expansion",
-      desc: `Transalliance Group broadened its portfolio with the creation of three specialized subsidiaries:</br> </br>
-                Transalliance Minerals – Focused on ethical mining & minerals production.</br>
-                Mondu Inc. - A Cross-boarder payment technology platform.</br>
+      desc: `Transalliance Group broadened its portfolio with the creation of three specialized subsidiaries:
+                Transalliance Minerals – Focused on ethical mining & minerals production.
+                Mondu Inc. - A Cross-boarder payment technology platform.
                 AlliancePay - A secure payment facilitation platform.`,
     },
     {

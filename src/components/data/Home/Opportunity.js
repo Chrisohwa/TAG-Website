@@ -11,7 +11,7 @@ const Opportunity = () => {
       className="full_width"
       h={{ base: "60vh", md: "60vh", xl: "100vh" }}
       // bgImage="url('https://ik.imagekit.io/oilm06bg9/opportunity.jpg?updatedAt=1757754970261')"
-      bgImage="url(/images/landing/opportunityopt.jpg)"
+      bgImage="url(/images/landing/opportunityopt.JPG)"
       bgSize={{ base: "cover", md: "cover" }}
       bgPos={{ base: "top center", md: "center" }}
       bgRepeat="no-repeat"

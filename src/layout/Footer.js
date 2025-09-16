@@ -11,7 +11,7 @@ import {
   Center,
 } from "@chakra-ui/react";
 import { footerList } from "../components/common/constants";
-import { FaTwitter, FaLinkedinIn, FaFacebookF } from "react-icons/fa";
+import { FaInstagram, FaLinkedinIn, FaFacebookF } from "react-icons/fa";
 import { IoChevronForwardOutline } from "react-icons/io5";
 import { FaMapLocationDot } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
@@ -232,7 +232,7 @@ export default function Footer() {
 
               <Link href="#">
                 <Center borderRadius="full" border="1px solid #2EC5FF" p="10px">
-                  <FaTwitter color={color} size={15} />
+                  <FaInstagram color={color} size={15} />
                 </Center>
               </Link>
             </HStack>

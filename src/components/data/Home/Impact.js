@@ -204,7 +204,7 @@ const Impact = () => {
           </Button>
         </Flex>
 
-        <Box py="50px">
+        <Box py="50px" textAlign="center">
           {/* Tablets and laptops */}
 
           {/* <Flex
@@ -411,7 +411,12 @@ const Impact = () => {
               </MotionBox>
             ))}
           </Flex> */}
-          <Image src="/images/landing/circlesnew.png" />
+          <Flex align="center" justify="center">
+            <Image
+              src="/images/landing/circlesnew.png"
+              w={{ md: "80%", xl: "90&" }}
+            />
+          </Flex>
         </Box>
       </Container>
     </Flex>

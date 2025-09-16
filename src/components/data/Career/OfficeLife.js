@@ -93,7 +93,7 @@ const OfficeLife = () => {
             whileInView={{ x: [-60, 0], opacity: 1 }}
             transition={{ duration: 1.1 }}
           >
-            <Box {...imgEffect} src="/images/career/grid1opt.jpg" alt="grid1" />
+            <Box {...imgEffect} src="/images/career/grid1opt.JPG" alt="grid1" />
           </MotionBox>
 
           {/* Grid 2 */}
@@ -105,7 +105,7 @@ const OfficeLife = () => {
             whileInView={{ x: [-60, 0], opacity: 1 }}
             transition={{ duration: 1.1 }}
           >
-            <Box {...imgEffect} src="/images/career/grid2opt.jpg" alt="grid2" />
+            <Box {...imgEffect} src="/images/career/grid2opt.JPG" alt="grid2" />
           </MotionBox>
 
           {/* Grid 3 */}
@@ -117,7 +117,7 @@ const OfficeLife = () => {
             whileInView={{ y: [60, 0], opacity: 1 }}
             transition={{ duration: 1.1 }}
           >
-            <Box {...imgEffect} src="/images/career/grid3opt.jpg" alt="grid3" />
+            <Box {...imgEffect} src="/images/career/grid3opt.JPG" alt="grid3" />
           </MotionBox>
 
           {/* Grid 4 */}
@@ -129,7 +129,7 @@ const OfficeLife = () => {
             whileInView={{ y: [-60, 0], opacity: 1 }}
             transition={{ duration: 1.1 }}
           >
-            <Box {...imgEffect} src="/images/career/grid4opt.jpg" alt="grid4" />
+            <Box {...imgEffect} src="/images/career/grid4opt.JPG" alt="grid4" />
           </MotionBox>
 
           {/* Grid 5 */}
@@ -145,7 +145,7 @@ const OfficeLife = () => {
             whileInView={{ y: [60, 0], opacity: 1 }}
             transition={{ duration: 1.1 }}
           >
-            <Box {...imgEffect} src="/images/career/grid5opt.jpg" alt="grid5" />
+            <Box {...imgEffect} src="/images/career/grid5opt.JPG" alt="grid5" />
           </MotionBox>
 
           {/* Grid 6 */}
@@ -161,7 +161,7 @@ const OfficeLife = () => {
             whileInView={{ x: [60, 0], opacity: 1 }}
             transition={{ duration: 1.1 }}
           >
-            <Box {...imgEffect} src="/images/career/grid6opt.jpg" alt="grid6" />
+            <Box {...imgEffect} src="/images/career/grid6opt.JPG" alt="grid6" />
           </MotionBox>
 
           {/* Button */}

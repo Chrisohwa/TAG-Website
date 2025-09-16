@@ -73,7 +73,7 @@ export default function SocialSection() {
             gridRow={{ base: "2", md: "2", xl: "2 / span 2" }}
             {...hoverAnim}
           >
-            <Box {...imgEffect} src="/images/career/car1opt.jpg" alt="car1" />
+            <Box {...imgEffect} src="/images/career/car1opt.JPG" alt="car1" />
           </MotionBox>
 
           {/* ====== Car2 ====== */}
@@ -82,7 +82,7 @@ export default function SocialSection() {
             gridRow={{ base: "3", md: "2", xl: "1 / span 2" }}
             {...hoverAnim}
           >
-            <Box {...imgEffect} src="/images/career/car2opt.jpg" alt="car2" />
+            <Box {...imgEffect} src="/images/career/car2opt.JPG" alt="car2" />
           </MotionBox>
 
           {/* ====== Car3 ====== */}
@@ -91,7 +91,7 @@ export default function SocialSection() {
             gridRow={{ base: "4", md: "3/span 4", xl: "3" }}
             {...hoverAnim}
           >
-            <Box {...imgEffect} src="/images/career/car3opt.jpg" alt="car3" />
+            <Box {...imgEffect} src="/images/career/car3opt.JPG" alt="car3" />
           </MotionBox>
 
           {/* ====== Car4 ====== */}
@@ -100,7 +100,7 @@ export default function SocialSection() {
             gridRow={{ base: "5", md: "3", xl: "1 / span 3" }}
             {...hoverAnim}
           >
-            <Box {...imgEffect} src="/images/career/car4opt.jpg" alt="car4" />
+            <Box {...imgEffect} src="/images/career/car4opt.JPG" alt="car4" />
           </MotionBox>
 
           {/* ====== Car5 ====== */}
@@ -109,7 +109,7 @@ export default function SocialSection() {
             gridRow={{ base: "6", md: "4", xl: "1" }}
             {...hoverAnim}
           >
-            <Box {...imgEffect} src="/images/career/car5opt.jpg" alt="car5" />
+            <Box {...imgEffect} src="/images/career/car5opt.JPG" alt="car5" />
           </MotionBox>
 
           {/* ====== Socials ====== */}
