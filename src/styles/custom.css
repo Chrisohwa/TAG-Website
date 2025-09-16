@@ -27,3 +27,180 @@
   margin-left: calc((100% - 100vw) / 2);
   margin-right: calc((100% - 100vw) / 2);
 }
+
+
+.review-card__anim1 {
+  animation: reviewCardAnim1 15s ease-in-out infinite alternate;
+  -webkit-animation: reviewCardAnim1 15s ease-in-out infinite alternate;
+}
+
+.review-card__anim2 {
+  animation: reviewCardAnim2 15s ease-in-out infinite alternate;
+  -webkit-animation: reviewCardAnim2 15s ease-in-out infinite alternate;
+}
+
+.card__anim1 {
+  animation: reviewCardAnim 15s ease-in-out infinite alternate;
+  -webkit-animation: reviewCardAnim 15s ease-in-out infinite alternate;
+}
+.card__anim1:hover {
+  animation-play-state: paused;
+}
+
+.review-card__anim1:hover {
+  animation-play-state: paused;
+}
+
+.review-card__anim2:hover {
+  animation-play-state: paused;
+}
+
+@keyframes reviewCardAnim {
+  from {
+    transform: translateX(-80%);
+    -webkit-transform: translateX(-80%);
+    -moz-transform: translateX(-80%);
+    -ms-transform: translateX(-80%);
+    -o-transform: translateX(-80%);
+  }
+  to {
+    transform: translateX(10%);
+    -webkit-transform: translateX(10%);
+    -moz-transform: translateX(10%);
+    -ms-transform: translateX(10%);
+    -o-transform: translateX(10%);
+  }
+}
+
+@keyframes reviewCardAnim1 {
+  from {
+    transform: translateX(-80%);
+    -webkit-transform: translateX(-80%);
+    -moz-transform: translateX(-80%);
+    -ms-transform: translateX(-80%);
+    -o-transform: translateX(-80%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes reviewCardAnim2 {
+  from {
+    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-80%);
+    -webkit-transform: translateX(-80%);
+    -moz-transform: translateX(-80%);
+    -ms-transform: translateX(-80%);
+    -o-transform: translateX(-80%);
+  }
+}
+
+@media (max-width: 500px) {
+  @keyframes reviewCardAnim {
+    from {
+      transform: translateX(-60%);
+      -webkit-transform: translateX(-60%);
+      -moz-transform: translateX(-60%);
+      -ms-transform: translateX(-60%);
+      -o-transform: translateX(-60%);
+    }
+    to {
+      transform: translateX(10%);
+      -webkit-transform: translateX(10%);
+      -moz-transform: translateX(10%);
+      -ms-transform: translateX(10%);
+      -o-transform: translateX(10%);
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  @keyframes reviewCardAnim1 {
+    from {
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+    }
+    to {
+      transform: translateX(30%);
+      -webkit-transform: translateX(30%);
+      -moz-transform: translateX(30%);
+      -ms-transform: translateX(30%);
+      -o-transform: translateX(30%);
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  @keyframes reviewCardAnim2 {
+    from {
+      transform: translateX(30%);
+      -webkit-transform: translateX(30%);
+      -moz-transform: translateX(30%);
+      -ms-transform: translateX(30%);
+      -o-transform: translateX(30%);
+    }
+    to {
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+    }
+  }
+}
+
+/* Specific fix for iOS Safari to hide any scrollbar thumb or border */
+.no_scroller::-webkit-scrollbar {
+  display: none;
+}
+
+.no_scroller {
+  overflow-x: scroll; /* Allow horizontal scroll but hide the scrollbar */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  position: relative;
+}
+.no_scroller {
+  -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on touch devices */
+  overflow: hidden; /* Completely hide both scrollbars */
+}
+
+.link_serv,
+.child_serv {
+  color: #15294b;
+}
+
+.par_serv:hover .link_serv,
+.par_serv:hover .child_serv {
+  color: #fff;
+}
+
+
+
+/* styles.css */
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.logo-animate {
+  opacity: 0;
+  animation: fadeUp 0.8s ease-out forwards;
+}

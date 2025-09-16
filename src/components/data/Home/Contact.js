@@ -19,6 +19,7 @@ import {toaster} from "../../ui/toaster";
 
 const Contact = () => {
   const [isChecked, setIsChecked] = useState(false);
+  
 
   const { mutate, isLoading } = useSendQuickMessage({
     onSuccess: (res) => {
@@ -257,7 +258,7 @@ const Contact = () => {
                     isChecked={values.acceptTerms}
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    colorScheme="blue"
+                    variant="outline"
                   >
                     <Checkbox.HiddenInput />
                     <Checkbox.Control />
@@ -285,8 +286,9 @@ const Contact = () => {
                     fontWeight="600"
                     _hover={{ bg: "#002244" }}
                     mt="15px"
-                    isLoading={isSubmitting || isLoading}
+                    loading={isSubmitting || isLoading}
                     loadingText="Sending..."
+                    spinnerPlacement="end"
                     disabled={!isValid || !dirty}
                   >
                     Send

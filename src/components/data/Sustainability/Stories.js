@@ -30,34 +30,9 @@ const Stories = () => {
   const [isMuted, setIsMuted] = useState(false);
   const [playbackRate, setPlaybackRate] = useState(1);
 
-  const handleTogglePlay = () => {
-    if (!videoRef.current) return;
-
-    if (play) {
-      videoRef.current.pause();
-    } else {
-      videoRef.current.play();
-    }
-    setPlay(!play);
-  };
-
-  const toggleMute = () => {
-    if (!videoRef.current) return;
-    videoRef.current.muted = !isMuted;
-    setIsMuted(!isMuted);
-  };
-
-  const handleSeek = (seconds) => {
-    if (!videoRef.current) return;
-    videoRef.current.currentTime += seconds;
-  };
-
-  const handleSpeed = (e) => {
-    const rate = parseFloat(e.target.value);
-    if (!videoRef.current) return;
-    videoRef.current.playbackRate = rate;
-    setPlaybackRate(rate);
-  };
+const handleTogglePlay = () => {
+  setPlay(true);
+};
 
   return (
     <Box
@@ -143,82 +118,50 @@ const Stories = () => {
                 position="relative"
                 w={{ base: "full", md: "443px" }}
                 h={{ base: "260px", md: "443px" }}
-                borderRadius={{ base: "22px", md: "full" }}
+                rounded={play ? "22px" : "full"}
                 overflow="hidden"
                 boxShadow="xl"
                 cursor="pointer"
-                onClick={handleTogglePlay}
+                onClick={!play ? handleTogglePlay : undefined}
               >
-                <Image
-                  src="images/sustainability/stories.png"
-                  w="100%"
-                  h="100%"
-                  objectFit="cover"
-                  transition="opacity 0.5s ease-in-out"
-                />
-                {/* <video
-                  ref={videoRef}
-                  muted
-                  loop
-                  playsInline
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    transition: "opacity 0.5s ease-in-out",
-                  }}
-                  // controls
-                >
-                  <source src="/images/landing/dusk.mp4" type="video/mp4" />
-                </video> */}
-
-                {/* Play/Pause button overlay */}
-                <Flex
-                  position="absolute"
-                  top="50%"
-                  left="50%"
-                  transform="translate(-50%, -50%)"
-                  w="70px"
-                  h="70px"
-                  borderRadius="full"
-                  bg="white"
-                  align="center"
-                  justify="center"
-                  boxShadow="md"
-                  display={play ? "none" : "flex"}
-                >
-                  {play ? <IoPauseSharp size={28} /> : <PiPlayFill size={28} />}
-                </Flex>
+                {play ? (
+                  <iframe
+                    src="https://www.youtube.com/embed/tVBZq2fq-WA?autoplay=1&mute=0"
+                    width="100%"
+                    height="100%"
+                    frameBorder="0"
+                    allow="autoplay; encrypted-media"
+                    allowFullScreen
+                    style={{ display: "block" }}
+                    title="Our Stories"
+                  />
+                ) : (
+                  <Image
+                    src="images/sustainability/storiesopt.JPG"
+                    w="100%"
+                    h="100%"
+                    objectFit="cover"
+                    transition="opacity 0.5s ease-in-out"
+                  />
+                )}
+                {!play && (
+                  <Flex
+                    position="absolute"
+                    top="50%"
+                    left="50%"
+                    transform="translate(-50%, -50%)"
+                    w="70px"
+                    h="70px"
+                    borderRadius="full"
+                    bg="white"
+                    align="center"
+                    justify="center"
+                    boxShadow="md"
+                  >
+                    <PiPlayFill size={28} />
+                  </Flex>
+                )}
               </Box>
-
-              {/* Controls */}
-              {/* <HStack
-                mt={4}
-                gap="25px"
-                position="absolute"
-                bottom="10%"
-                w="full"
-                justify="center"
-                opacity={0}
-                transition="opacity 0.3s ease"
-                _hover={{ opacity: 1 }} // 👈 Now works
-              >
-                <Box as="button" onClick={() => handleSeek(-10)}>
-                  <IoPlayBack color="#fff" size={28} />
-                </Box>
-
-                <Box as="button" onClick={handleTogglePlay}>
-                  {play ? (
-                    <IoPauseSharp color="#fff" size={28} />
-                  ) : (
-                    <IoPlaySharp color="#fff" size={28} />
-                  )}
-                </Box>
-
-                <Box as="button" onClick={() => handleSeek(10)}>
-                  <IoPlayForward color="#fff" size={28} />
-                </Box>
-              </HStack> */}
 
               {/* Decorative Dots PNG */}
               <Image

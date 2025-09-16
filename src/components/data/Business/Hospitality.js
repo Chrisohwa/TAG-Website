@@ -17,7 +17,7 @@ const Hospitality = () => {
         <Image
           w="100%"
           h="full"
-          src="/images/services/hospitalityimg.JPG"
+          src="/images/services/hospitalityimgopt.JPG"
           pos="absolute"
           right="0"
           zIndex={0}

@@ -9,6 +9,8 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import BrandLogo from "./BrandLogo";
+import BrandlogoResponsive from "./BrandlogoResponsive";
 
 const Partner = () => {
   const navigate = useNavigate();
@@ -26,6 +28,7 @@ const Partner = () => {
         <Flex
           justify={{ base: "center", md: "space-between", xl: "space-between" }}
           align={{ base: "center", md: "center", xl: "center" }}
+          flexDir={{ base: "column", md: "column", xl: "row" }}
           gap="10px"
         >
           <Flex
@@ -34,7 +37,7 @@ const Partner = () => {
             justify={{ base: "flex-start", md: "flex-start", xl: "flex-start" }}
             gapY={4}
             textAlign={{ base: "left", md: "left", xl: "left" }}
-            bg="transparent" 
+            bg="transparent"
           >
             <Text
               color="#005032"
@@ -79,14 +82,26 @@ const Partner = () => {
           </Flex>
 
           <Flex
-            display={{ base: "none", md: "block" }}
+            display={{ base: "none", md: "none", xl: "flex" }}
             py={{ base: 0, md: "30px", xl: "30px" }}
           >
-            <Image
+            {/* <Image
               src="/images/landing/partners.png"
               alt="partners"
               w={{ base: "", md: "", xl: "" }}
-            />
+            /> */}
+
+            <BrandLogo />
+          </Flex>
+
+          <Flex
+            display={{ base: "flex", md: "flex", xl: "none" }}
+            py={{ base: "15px", md: "30px", xl: "30px" }}
+            minH={{ base: "250px", md: "300px", xl: "" }}
+            align="center"
+            justify="center"
+          >
+            <BrandlogoResponsive />
           </Flex>
         </Flex>
       </Container>

@@ -23,7 +23,7 @@ export const messSchema = Yup.object().shape({
   email: Yup.string()
     .email("Invalid email address")
     .required("Email is required"),
-  message: Yup.string().min(10, "Message must be at least 10 characters"),
+  message: Yup.string().min(1, "Message must be at least 1 characters"),
   acceptTerms: Yup.boolean()
     .oneOf([true], "You must accept the T&C")
     .required("You must accept the T&C"),
@@ -49,5 +49,5 @@ export const messageSchema = Yup.object().shape({
 
   company: Yup.string().min(2, "Company name must be at least 2 characters"),
 
-  message: Yup.string().min(10, "Message must be at least 10 characters"),
+  message: Yup.string().min(1, "Message must be at least 1 characters"),
 });

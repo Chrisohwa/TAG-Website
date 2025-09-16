@@ -86,7 +86,7 @@ const MessageForm = () => {
 
           <Box
             maxW="900px"
-            w={{ base: "full", md: "70%", xl: "70%" }}
+            w={{ base: "full", md: "100%", xl: "70%" }}
             mx="auto"
             p={{ base: 4, md: 8 }}
             bg="#fff"
@@ -221,8 +221,10 @@ const MessageForm = () => {
                       py={6}
                       borderRadius="8px"
                       _hover={{ bg: "#1d4ed8" }}
-                      isLoading={isSubmitting || isLoading}
-                      // disabled={!isValid || !dirty}
+                      loading={isSubmitting || isLoading}
+                      loadingText="Sending..."
+                      spinnerPlacement="end"
+                      disabled={!isValid || !dirty}
                     >
                       Send Message
                     </Button>

@@ -17,7 +17,7 @@ const Fintech = () => {
         <Image
           w="100%"
           h="full"
-          src="/images/services/financeimage.JPG"
+          src="/images/services/financeimageopt.JPG"
           pos="absolute"
           right="0"
           zIndex={0}

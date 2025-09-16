@@ -112,7 +112,7 @@ const OurTeam = () => {
                     onClick={() =>
                       navigate(`/about-us/member-details/${member.id}`)
                     }
-                    newColor={idx % 2 === 0 ? "#001A32" : "#fff"}
+                    newColor={index < 4 ? "#001A32" : "#fff"}
                   />
                 </motion.div>
               ))}

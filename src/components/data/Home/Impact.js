@@ -163,7 +163,7 @@ const Impact = () => {
           px={{ base: "", md: "", xl: "40px" }}
         >
           <Heading color="#00472D" fontWeight={700} fontSize="20px">
-            Corperate Sustainability
+            Corporate Sustainability
           </Heading>
           <Heading
             color="#001A32"
@@ -411,7 +411,7 @@ const Impact = () => {
               </MotionBox>
             ))}
           </Flex> */}
-          <Image src="/images/landing/circles.png" />
+          <Image src="/images/landing/circlesnew.png" />
         </Box>
       </Container>
     </Flex>

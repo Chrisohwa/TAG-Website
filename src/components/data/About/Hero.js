@@ -17,7 +17,7 @@ const Hero = () => {
   return (
     <Flex
       position="relative"
-      minH={{ base: "60vh", lg: "60vh", xl: "100vh" }}
+      minH={{ base: "60vh", md: "60vh", xl: "100vh" }}
       overflow="hidden"
       className="full_width"
       align="center"
@@ -64,16 +64,17 @@ const Hero = () => {
         maxW="1350px"
         px={{ base: "10px", md: "15px", xl: "0px" }}
         mt={{ base: "100px", md: "", xl: "" }}
-        minH={{ base: "40vh", lg: "60vh" }}
+        pt={{ base: "", md: "200px", xl: "200px" }}
+        minH={{ base: "40vh", md: "60vh", xl:"100vh" }}
       >
         <Flex
           zIndex={1}
           position="relative"
           direction="column"
           justify="flex-end"
-          h="100%"
+          h="full"
         >
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ x: [50, 0], opacity: 1 }}
             transition={{ duration: 1.1 }}
@@ -86,7 +87,7 @@ const Hero = () => {
             >
               Who we are
             </Heading>
-          </motion.div>
+          </motion.div> */}
 
           <motion.div
             initial={{ opacity: 0 }}

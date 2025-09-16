@@ -49,9 +49,9 @@ const OurPhilosophy = () => {
                 alt="Happy meeting"
                 borderRadius="md"
                 objectFit="cover"
-                w={{ base: "100%", md: "200px", lg: "210px", xl: "525px" }}
+                w={{ base: "100%", md: "350px", xl: "525px" }}
                 h="395px"
-                
+                loading="lazy"
               />
             </motion.div>
 
@@ -66,7 +66,7 @@ const OurPhilosophy = () => {
                 left={{ base: "0px", md: "90px" }}
                 transform={{ base: "", md: "translateY(-50%)" }}
                 bg="#fff"
-                w={{ base: "100%", md: "200px", lg: "210px", xl: "470px" }}
+                w={{ base: "100%", md: "350px", xl: "470px" }}
                 justify="flex-end"
                 zIndex={0}
               >
@@ -78,7 +78,7 @@ const OurPhilosophy = () => {
                   w={{ base: "100%", md: "100%" }}
                   h={{ base: "250px", md: "380px" }}
                   zIndex={1}
-                  
+                  loading="lazy"
                 />
               </Flex>
             </motion.div>
@@ -94,9 +94,9 @@ const OurPhilosophy = () => {
                 alt="Team clapping"
                 borderRadius="md"
                 objectFit="cover"
-                w={{ base: "100%", md: "200px", lg: "210px", xl: "525px" }}
+                w={{ base: "100%", md: "350px", xl: "525px" }}
                 h="395px"
-                
+                loading="lazy"
               />
             </motion.div>
           </Flex>

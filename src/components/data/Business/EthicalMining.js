@@ -17,7 +17,7 @@ const EthicalMining = () => {
         <Image
           w="100%"
           h="full"
-          src="/images/services/miningimage.JPG"
+          src="/images/services/miningimageopt.JPG"
           pos="absolute"
           right="0"
           zIndex={0}

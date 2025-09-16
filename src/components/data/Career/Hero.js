@@ -28,8 +28,8 @@ const Hero = () => {
       gapY={{ base: "50px", lg: "" }}
     >
       <Image
-        src="/images/career/careerheroimage.png"
-        h={{base:"100%", md:"80%", xl:"100%"}}
+        src="/images/career/careerheroimageopt.JPG"
+        h={{ base: "100%", md: "80%", xl: "100%" }}
         w="100%"
         // maxH="100vh"
         position="absolute"
@@ -89,7 +89,7 @@ const Hero = () => {
             direction="column"
             justify={{ base: "flex-end", md: "flex-end", xl: "flex-end" }}
             align="flex-start"
-            h={{base:"100%", md:"100%", xl:"60vh"}}
+            h={{ base: "100%", md: "100%", xl: "60vh" }}
             color="#E6EEEB"
             gap="24px"
             my="auto"
@@ -105,7 +105,7 @@ const Hero = () => {
             <Text
               fontSize={{ base: "16px", md: "20px", xl: "24px" }}
               fontWeight={600}
-              lineHeight={{base:"22px",md:"32px", xl:"38px"}}
+              lineHeight={{ base: "22px", md: "32px", xl: "38px" }}
               maxW={{ base: "", md: "", xl: "1283px" }}
               textAlign={{ base: "left", md: "left", xl: "left" }}
             >

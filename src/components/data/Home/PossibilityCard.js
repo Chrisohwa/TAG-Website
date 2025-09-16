@@ -1,8 +1,11 @@
 import { Box, Text, Link, Flex, Icon, Heading } from "@chakra-ui/react";
 import { FiArrowRight } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
 import React from "react";
 
 const PossibilityCard = ({ image, title, description, link }) => {
+
+  const navigate = useNavigate();
   return (
     <Box
       position="relative"
@@ -15,6 +18,7 @@ const PossibilityCard = ({ image, title, description, link }) => {
       backgroundPosition="center"
       _hover={{ cursor: "pointer", scale: "105%" }}
       transition="0.3s ease-in-out"
+      onClick={()=> navigate(link)}
     >
       {/* Gradient overlay */}
       <Box

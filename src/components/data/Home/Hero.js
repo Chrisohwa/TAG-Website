@@ -11,6 +11,7 @@ import {
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { BsForwardFill } from "react-icons/bs";
+import { IoIosArrowRoundForward } from "react-icons/io";
 
 const Hero = () => {
   const [isMobile] = useMediaQuery("(max-width: 768px)");
@@ -58,9 +59,7 @@ const Hero = () => {
         onCanPlay={() => setLoaded(true)}
       >
         {/* <source src="/images/landing/dusk.mp4" type="video/mp4" /> */}
-        <source
-          src="https://ik.imagekit.io/oilm06bg9/dusk.mp4/ik-video.mp4?updatedAt=1757751757476"
-        />
+        <source src="https://ik.imagekit.io/oilm06bg9/dusk.mp4/ik-video.mp4?updatedAt=1757751757476" />
       </video>
 
       {/* dark background overlay */}
@@ -137,7 +136,7 @@ const Hero = () => {
               {links.map((link, index) => (
                 <Flex
                   key={index}
-                  gap="20px"
+                  gap="0px"
                   justify={{ base: "flex-start", md: "", xl: "center" }}
                   align={{ base: "flex-start", md: "", xl: "center" }}
                   onMouseEnter={() => setHoveredIndex(index)}
@@ -155,11 +154,15 @@ const Hero = () => {
                     </Text>
                   </Link>
 
-                  {hoveredIndex === index && (
+                  <Box mt="10px" transition="0.3s">
+                    <IoIosArrowRoundForward size={20} color="#fff" />
+                  </Box>
+
+                  {/* {hoveredIndex === index && (
                     <Box mt="10px" transition="0.3s">
-                      <BsForwardFill size={20} color="#fff" />
+                      <IoIosArrowRoundForward size={20} color="#fff" />
                     </Box>
-                  )}
+                  )} */}
                 </Flex>
               ))}
             </Flex>

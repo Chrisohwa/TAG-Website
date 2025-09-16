@@ -17,7 +17,7 @@ const Currency = () => {
         <Image
           w="100%"
           h="full"
-          src="/images/services/currencyimage.JPG"
+          src="/images/services/currencyimageopt.JPG"
           pos="absolute"
           right="0"
           zIndex={0}
