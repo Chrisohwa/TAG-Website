@@ -92,7 +92,7 @@ const NavCard = ({
         </Button>
 
         <Image
-          src="/images/career/grid6.png"
+          src="/images/career/grid6opt.jpg"
           w="full"
           h="full"
           objectFit="cover"
