@@ -146,7 +146,7 @@ const Strategy = () => {
       pos="relative"
       className="full_width"
       // bgImage="url(https://ik.imagekit.io/oilm06bg9/greenfield.png?updatedAt=1757758129539)"
-      bgImage="url(/images/sustainability/greenfieldopt.JPG)"
+      bgImage="url(/images/sustainability/greenfieldopt.jpg)"
       bgRepeat="no-repeat"
       bgSize="cover"
       bgPos="center"

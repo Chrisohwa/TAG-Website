@@ -149,7 +149,7 @@ export const footerList = [
 
 export const possibilityData = [
   {
-    image: "/images/landing/currencyopt.JPG",
+    image: "/images/landing/currencyopt.jpg",
     // image:
     //   "https://ik.imagekit.io/oilm06bg9/currency.jpg?updatedAt=1757754646131",
     title: "Currency Services",
@@ -158,7 +158,7 @@ export const possibilityData = [
     link: "/businesses/currency",
   },
   {
-    image: "/images/landing/fintechopt.JPG",
+    image: "/images/landing/fintechopt.jpg",
     // image:
     //   "https://ik.imagekit.io/oilm06bg9/fintech.jpg?updatedAt=1757754647189",
     title: "Financial Technology",
@@ -167,7 +167,7 @@ export const possibilityData = [
     link: "/businesses/fintech",
   },
   {
-    image: "/images/landing/travelsopt.JPG",
+    image: "/images/landing/travelsopt.jpg",
     // image:
     //   "https://ik.imagekit.io/oilm06bg9/travels.jpg?updatedAt=1757754652140",
     title: "Travel, Tourism & Hospitality Services",
@@ -176,7 +176,7 @@ export const possibilityData = [
     link: "/businesses/travels",
   },
   {
-    image: "/images/landing/miningopt.JPG",
+    image: "/images/landing/miningopt.jpg",
     // image:
     //   "https://ik.imagekit.io/oilm06bg9/mining.jpg?updatedAt=1757754648411",
     title: "Mining & Minerals Production",
@@ -194,7 +194,7 @@ export const teamData = [
         id: 1,
         name: "Kamsi Okafor",
         title: "Founder & CEO",
-        img: "/images/about/el_kamsiopt.JPG",
+        img: "/images/about/el_kamsiopt.jpg",
         // img: "https://ik.imagekit.io/oilm06bg9/el_kamsi.jpg?updatedAt=1757756751564",
         description: `At Transalliance Group, we enable businesses navigate
   the complexities of global trade with seamless currency exchange, 
@@ -215,7 +215,7 @@ export const teamData = [
         name: "Anthony Nwosu",
         title: "Chief Treasury & Operations Officer",
         // img: "https://ik.imagekit.io/oilm06bg9/el_anthony.jpg?updatedAt=1757756751277",
-        img: "/images/about/el_anthonyopt.JPG",
+        img: "/images/about/el_anthonyopt.jpg",
         description: `At Transalliance Group, we enable businesses navigate
   the complexities of global trade with seamless currency exchange, 
   liquidity management, and cross-border trade solutions. Our currency 
@@ -235,7 +235,7 @@ export const teamData = [
         name: "Lovelyn Mark",
         title: "Chief Legal, Compliance & Admin Officer",
         // img: "https://ik.imagekit.io/oilm06bg9/el_lovelyn.jpg?updatedAt=1757756751603",
-        img: "/images/about/el_lovelynopt.JPG",
+        img: "/images/about/el_lovelynopt.jpg",
         description: `At Transalliance Group, we enable businesses navigate
   the complexities of global trade with seamless currency exchange, 
   liquidity management, and cross-border trade solutions. Our currency 
@@ -255,7 +255,7 @@ export const teamData = [
         name: "Olufemi Adedipe",
         title: "Chief Financial Officer",
         // img: "https://ik.imagekit.io/oilm06bg9/el_olufemi.jpg?updatedAt=1757756751588",
-        img: "/images/about/el_olufemiopt.JPG",
+        img: "/images/about/el_olufemiopt.jpg",
         description: `At Transalliance Group, we enable businesses navigate
   the complexities of global trade with seamless currency exchange, 
   liquidity management, and cross-border trade solutions. Our currency 
@@ -275,7 +275,7 @@ export const teamData = [
         name: "Olufemi Ojo-Omoniyi",
         title: "Chief Risk & Internal Control Officer",
         // img: "https://ik.imagekit.io/oilm06bg9/el_olufemi.jpg?updatedAt=1757756751588",
-        img: "/images/about/el_ojoopt.JPG",
+        img: "/images/about/el_ojoopt.jpg",
         description: `At Transalliance Group, we enable businesses navigate
   the complexities of global trade with seamless currency exchange, 
   liquidity management, and cross-border trade solutions. Our currency 
@@ -295,7 +295,7 @@ export const teamData = [
         name: "Afam Obodozie",
         title: "Chief Strategy, Research & Business Intelligence Officer",
         // img: "https://ik.imagekit.io/oilm06bg9/el_afam1.png?updatedAt=1757756749449",
-        img: "/images/about/el_afam1opt.JPG",
+        img: "/images/about/el_afam1opt.jpg",
         description: `At Transalliance Group, we enable businesses navigate
   the complexities of global trade with seamless currency exchange, 
   liquidity management, and cross-border trade solutions. Our currency 
@@ -315,7 +315,7 @@ export const teamData = [
         name: "Mayowa Igunbor",
         title: "Chief People & Communications Officer",
         // img: "https://ik.imagekit.io/oilm06bg9/default.png?updatedAt=1757756748197",
-        img: "/images/about/el_mayowaopt.JPG",
+        img: "/images/about/el_mayowaopt.jpg",
         description: `At Transalliance Group, we enable businesses navigate
   the complexities of global trade with seamless currency exchange, 
   liquidity management, and cross-border trade solutions. Our currency 
@@ -335,7 +335,7 @@ export const teamData = [
         name: "Anselm Fowel",
         title: "Chief Technology &Innovation Officer",
         // img: "https://ik.imagekit.io/oilm06bg9/default.png?updatedAt=1757756748197",
-        img: "/images/about/el_anselmopt.JPG",
+        img: "/images/about/el_anselmopt.jpg",
         description: `At Transalliance Group, we enable businesses navigate
   the complexities of global trade with seamless currency exchange, 
   liquidity management, and cross-border trade solutions. Our currency 
