@@ -97,7 +97,6 @@ const NavCard = ({
           h="full"
           objectFit="cover"
           objectPosition="top"
-          loading="lazy"
         />
       </Flex>
     );
