@@ -147,7 +147,7 @@ export const footerList = [
 
 export const possibilityData = [
   {
-    image: "/images/landing/currencyopt.JPG",
+    image: "/images/landing/currencyopt.jpg",
     // image:
     //   "https://ik.imagekit.io/oilm06bg9/currency.jpg?updatedAt=1757754646131",
     title: "Currency Services",
@@ -156,7 +156,7 @@ export const possibilityData = [
     link: "/businesses/currency",
   },
   {
-    image: "/images/landing/fintechopt.JPG",
+    image: "/images/landing/fintechopt.jpg",
     // image:
     //   "https://ik.imagekit.io/oilm06bg9/fintech.jpg?updatedAt=1757754647189",
     title: "Financial Technology",
@@ -165,7 +165,7 @@ export const possibilityData = [
     link: "/businesses/fintech",
   },
   {
-    image: "/images/landing/travelsopt.JPG",
+    image: "/images/landing/travelsopt.jpg",
     // image:
     //   "https://ik.imagekit.io/oilm06bg9/travels.jpg?updatedAt=1757754652140",
     title: "Travel, Tourism & Hospitality Services",
@@ -174,7 +174,7 @@ export const possibilityData = [
     link: "/businesses/travels",
   },
   {
-    image: "/images/landing/miningopt.JPG",
+    image: "/images/landing/miningopt.jpg",
     // image:
     //   "https://ik.imagekit.io/oilm06bg9/mining.jpg?updatedAt=1757754648411",
     title: "Mining & Minerals Production",
@@ -192,7 +192,7 @@ export const teamData = [
         id: "KamsiOkafor",
         name: "Kamsi Okafor",
         title: "Founder & CEO",
-        img: "/images/about/el_kamsiopt.JPG",
+        img: "/images/about/el_kamsiopt.jpg",
         // img: "https://ik.imagekit.io/oilm06bg9/el_kamsi.jpg?updatedAt=1757756751564",
         description: ` Kamsi Okafor is a visionary leader with over a decade of expertise spanning finance, business administration, and the global capital market. 
         As the Founder and CEO of Transalliance Group, he drives the company’s strategic direction, ensuring seamless alignment of investments, business plans, and 
@@ -210,7 +210,7 @@ export const teamData = [
         name: "Anthony Nwosu",
         title: "Chief Treasury & Operations Officer",
         // img: "https://ik.imagekit.io/oilm06bg9/el_anthony.jpg?updatedAt=1757756751277",
-        img: "/images/about/el_anthonyopt.JPG",
+        img: "/images/about/el_anthonyopt.jpg",
         description: `Anthony Nwosu is the Chief Treasury and Operations Officer at Transalliance Group. He holds an MBA from the University of Leicester, UK, and a BSc from the University of Ibadan, Nigeria. 
         An associate member of the Nigerian Institute of Management, Anthony is also a key contributor to the Nigerian Economic Summit Group (NESG) and serves on the faculty of the prestigious Rome Business School, 
         which operates in over 120 countries worldwide. 
@@ -224,7 +224,7 @@ export const teamData = [
         name: "Lovelyn Mark",
         title: "Chief Legal, Compliance & Admin Officer",
         // img: "https://ik.imagekit.io/oilm06bg9/el_lovelyn.jpg?updatedAt=1757756751603",
-        img: "/images/about/el_lovelynopt.JPG",
+        img: "/images/about/el_lovelynopt.jpg",
         description: `Lovelyn currently serves as the Chief Legal, Compliance & Admin Officer at Transalliance Group. With an LLB in law and over 12 years of extensive experience in banking, legal services, 
         and compliance across diverse sectors, she brings a wealth of knowledge to her role. In her capacity, she provides expert legal advice to the Company and its Subsidiaries on a wide range of both 
         contentious and non-contentious issues. Additionally, she oversees the crucial task of ensuring corporate compliance with regulatory and statutory laws and regulations. Lovelyn is a highly skilled 
@@ -235,7 +235,7 @@ export const teamData = [
         name: "Olufemi Adedipe",
         title: "Chief Financial Officer",
         // img: "https://ik.imagekit.io/oilm06bg9/el_olufemi.jpg?updatedAt=1757756751588",
-        img: "/images/about/el_olufemiopt.JPG",
+        img: "/images/about/el_olufemiopt.jpg",
         description: `Oluwafemi Adedipe, Chief Financial Officer at Transalliance Group, brings over 13 years of experience in corporate finance, spanning both public and private sectors. 
         She has held senior roles in structured accounting and audit organizations, including Scotia Bank Canada, the Central Bank of Nigeria, and UHY, where she served as Senior Supervisor, Audit. 
         </br> </br>
@@ -248,7 +248,7 @@ export const teamData = [
         name: "Olufemi Ojo-Omoniyi",
         title: "Chief Risk & Internal Control Officer",
         // img: "https://ik.imagekit.io/oilm06bg9/el_olufemi.jpg?updatedAt=1757756751588",
-        img: "/images/about/el_ojoopt.JPG",
+        img: "/images/about/el_ojoopt.jpg",
         description: `Olufemi is the Chief Risk and Internal Control Officer at Transalliance Group. A seasoned Governance, Risk, and Compliance Professional (GRCP), he is a Certified Risk Manager (CRM) 
         and an ISO 22301-certified Business Continuity Management System (BCMS) Lead Implementer. With a B.Eng in Production Engineering and a second   degree in Process Engineering, Olufemi brings over 
         20 years of multidisciplinary experience spanning enterprise risk management, internal control, business continuity, capital markets, banking, venture capital, environmental sustainability, and 
@@ -262,7 +262,7 @@ export const teamData = [
         name: "Afam Obodozie",
         title: "Chief Strategy, Research & Business Intelligence Officer",
         // img: "https://ik.imagekit.io/oilm06bg9/el_afam1.png?updatedAt=1757756749449",
-        img: "/images/about/el_afam1opt.JPG",
+        img: "/images/about/el_afam1opt.jpg",
         description: `Afam serves as the Chief Strategy, Research & Business Intelligence Officer at Transalliance Group, bringing over a decade of experience in business development, strategy, and innovative thinking. 
         He has worked with leading organizations like Jumia Nigeria, Sujimoto, CeLD, and Household Max (HHM), and has consulted for businesses such as STERN Projects, Adiba, and VC Premium Limited.
         </br> </br>
@@ -275,7 +275,7 @@ export const teamData = [
         name: "Mayowa Igunbor",
         title: "Chief People & Communications Officer",
         // img: "https://ik.imagekit.io/oilm06bg9/default.png?updatedAt=1757756748197",
-        img: "/images/about/el_mayowaopt.JPG",
+        img: "/images/about/el_mayowaopt.jpg",
         description: `Mayowa is the Chief People and Communications Officer at Transalliance Group, with nearly 20 years of experience in Human Resource Management within the financial services industry. 
         A certified professional with credentials from the Human Resource Certification Institute (PHRi) and the Chartered Institute of Personnel Management, Mayowa specializes in organizational change, 
         talent management, and stakeholder engagement. She has held key roles, including HR Consultant at Pan African Capital Holding Limited and Business Analyst at Franoft Consulting. 
@@ -288,7 +288,7 @@ export const teamData = [
         name: "Anselm Fowel",
         title: "Chief Technology &Innovation Officer",
         // img: "https://ik.imagekit.io/oilm06bg9/default.png?updatedAt=1757756748197",
-        img: "/images/about/el_anselmopt.JPG",
+        img: "/images/about/el_anselmopt.jpg",
         description: `Anselm is the Chief Technology and Innovation Officer at Transalliance Group, bringing extensive expertise in fintech, banking, insurance, and software development. Specializing in enterprise software, 
         digital transformation, and product strategy, he focuses on leveraging technology to drive business growth and operational excellence. With a career spanning roles at organizations such as CloudBridge, Fidelity Bank, 
         AXA, Global Accelerex, and BluePrint, Anselm has honed his skills in software engineering, project delivery, and product management. Proficient in programming languages like C#, PHP, and Java, he employs AWS and 

@@ -18,14 +18,18 @@ const NavCard = ({
   key,
   imageVariant,
   image,
+  width,
+  height,
 }) => {
   return (
     <Flex
       flexDir="column"
       key={key}
       onClick={onClick}
-      w="630px"
-      h="208px"
+      // w="630px"
+      // h="208px"
+      w={width}
+      h={height}
       p="20px"
       bg="#fff"
       borderRadius="9px"
@@ -81,27 +85,31 @@ const NavCard = ({
   );
 };
 
-const SustainabilityNavGrid = ({ onNavigate }) => {
+const SustainabilityNavGrid = ({ onNavigate, width, height }) => {
   return (
-    <Grid
-      w="100%"
-      gridTemplateColumns="repeat(2, 1fr)"
-      placeItems="center"
+    <Flex
+      // w="100%"
+      // gridTemplateColumns="repeat(2, 1fr)"
+      // placeItems="center"
       gap="20px"
       px="20px"
       py="30px"
+      align="center"
+      justify="center"
     >
       {headers[2].sub?.map((item, i) => (
-        <GridItem key={i}>
+        // <GridItem key={i}>
           <NavCard
             name={item.name}
             icon={item.icon}
             details={item.details}
             onClick={() => onNavigate(headers[2], item)}
+            width={width}
+            height={height}
           />
-        </GridItem>
+        // </GridItem>
       ))}
-    </Grid>
+    </Flex>
   );
 };
 

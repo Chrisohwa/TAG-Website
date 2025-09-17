@@ -138,7 +138,7 @@ const Header = () => {
           display={isMobile ? "none" : "flex"}
           w={scroll ? "auto" : "100%"}
           borderRadius="35px"
-          onMouseEnter={() => scroll && setScroll(false)}
+          // onMouseEnter={() => scroll && setScroll(false)}
           onMouseLeave={() => {
             setHoverIndex(null);
             if (window.scrollY > 20) setScroll(true);
@@ -209,7 +209,7 @@ const Header = () => {
                           lineHeight="14px"
                           fontSize="16px"
                           textWrap="nowrap"
-                          px={4}
+                          px={4.5}
                           py={2}
                           fontWeight={700}
                           color={
@@ -232,15 +232,27 @@ const Header = () => {
           {hoverIndex !== null && (
             <>
               {headers[hoverIndex]?.name === "About Us" && (
-                <AboutNavGrid onNavigate={handleNavigation} />
+                <AboutNavGrid
+                  onNavigate={handleNavigation}
+                  width={scroll ? "200px" : "350px"}
+                  height={scroll ? "250px" : "208px"}
+                />
               )}
 
               {headers[hoverIndex]?.name === "Businesses" && (
-                <BusinessNavGrid onNavigate={handleNavigation} />
+                <BusinessNavGrid
+                  onNavigate={handleNavigation}
+                  width={scroll ? "200px" : "350px"}
+                  height={scroll ? "250px" : "208px"}
+                />
               )}
 
               {headers[hoverIndex]?.name === "Sustainability" && (
-                <SustainabilityNavGrid onNavigate={handleNavigation} />
+                <SustainabilityNavGrid
+                  onNavigate={handleNavigation}
+                  width={scroll ? "350px" : "350px"}
+                  height={scroll ? "250px" : "208px"}
+                />
               )}
             </>
           )}

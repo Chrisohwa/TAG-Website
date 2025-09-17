@@ -137,7 +137,7 @@ const handleTogglePlay = () => {
                   />
                 ) : (
                   <Image
-                    src="images/sustainability/storiesopt.JPG"
+                    src="images/sustainability/storiesopt.jpg"
                     w="100%"
                     h="100%"
                     objectFit="cover"

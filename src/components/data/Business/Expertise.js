@@ -78,7 +78,7 @@ const Expertise = () => {
               transition={{ duration: 1.1 }}
             >
               <Image
-                src="/images/services/currencyimageopt.JPG"
+                src="/images/services/currencyimageopt.jpg"
                 alt="Currency Service"
                 w="100%"
                 objectFit="contain"
@@ -127,7 +127,7 @@ const Expertise = () => {
               transition={{ duration: 1.1 }}
             >
               <Image
-                src="/images/services/miningimageopt.JPG"
+                src="/images/services/miningimageopt.jpg"
                 alt="Mining"
                 w="100%"
                 objectFit="contain"
@@ -176,7 +176,7 @@ const Expertise = () => {
               transition={{ duration: 1.1 }}
             >
               <Image
-                src="/images/services/hospitalityimageopt.JPG"
+                src="/images/services/hospitalityimageopt.jpg"
                 alt="Travel & Hospitality"
                 w="100%"
                 objectFit="contain"
@@ -225,7 +225,7 @@ const Expertise = () => {
               transition={{ duration: 1.1 }}
             >
               <Image
-                src="/images/services/Financeimageopt.JPG"
+                src="/images/services/Financeimageopt.jpg"
                 alt="FinTech"
                 w="100%"
                 objectFit="contain"

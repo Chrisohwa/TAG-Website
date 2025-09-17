@@ -18,14 +18,18 @@ const NavCard = ({
   key,
   imageVariant,
   image,
+  width,
+  height,
 }) => {
   return (
     <Flex
       flexDir="column"
       key={key}
       onClick={onClick}
-      w="420px"
-      h="208px"
+      // w={{ md: "300px", xl: "200px" }}
+      // h={{base:"200px", xl:"208px"}}
+      w={width}
+      h={height}
       p="20px"
       bg="#fff"
       borderRadius="9px"
@@ -61,7 +65,7 @@ const NavCard = ({
         fontWeight={500}
         lineHeight="20px"
         color="#263238"
-        noOfLines={4}
+        lineClamp={6}
         mb="12px"
       >
         {details}
@@ -82,27 +86,29 @@ const NavCard = ({
   );
 };
 
-const AboutNavGrid = ({onNavigate}) => {
+const AboutNavGrid = ({onNavigate, width, height}) => {
   return (
-    <Grid
-      w="100%"
-      gridTemplateColumns="repeat(3, 1fr)"
-      placeItems="center"
+    <Flex
+      w={{ md: "70%", xl: "100%" }}
+      gridTemplateColumns="repeat(3, 350px)"
       gap="20px"
       px="20px"
       py="30px"
+      justify="center"
     >
       {headers[0].sub?.map((item, i) => (
-        <GridItem key={i}>
+        // <GridItem key={i}>
           <NavCard
             name={item.name}
             icon={item.icon}
             details={item.details}
             onClick={() => onNavigate(headers[0], item)}
+            width={width}
+            height={height}
           />
-        </GridItem>
+        // </GridItem>
       ))}
-    </Grid>
+    </Flex>
   );
 };
 

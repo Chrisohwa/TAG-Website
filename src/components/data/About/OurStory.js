@@ -51,7 +51,7 @@ const OurStory = () => {
       side: "right",
       title: "The Group",
       desc: `In 2022, TransMinerals secured an exploration license from the Federal Government of Nigeria, 
-              further strengthening its industry position with a 25-year mining lease in 2023.</br></br>
+              further strengthening its industry position with a 25-year mining lease in 2023.
               
               The Group entered the financial technology space by launching AlliancePay, a payment facilitation 
               company for businesses, culminating in the acquisition of a PSSP License from the Central Bank of Nigeria.`,

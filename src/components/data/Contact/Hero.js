@@ -29,7 +29,7 @@ const Hero = () => {
       gapY={{ base: "50px", lg: "" }}
     >
       <Image
-        src="/images/contact/contactheroimageopt.JPG"
+        src="/images/contact/contactheroimageopt.jpg"
         h="100%"
         w="100%"
         position="absolute"
